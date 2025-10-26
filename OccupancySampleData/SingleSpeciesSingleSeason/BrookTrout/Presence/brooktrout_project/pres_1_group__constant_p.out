@@ -1,0 +1,56 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Sun Oct 23 17:18:43 2011,       Version 3.1110329
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=brooktrout.pao
+==>l=pres_1_group__Constant_P.out
+==>name=1 group, Constant P
+==>model=11c
+==>lmt=200
+==>boot2=100
+model=11c N,T-->77,3
+modtype-->1 
+
+********* Input Data summary *******
+Number of sites                = 77
+Number of sampling occasions   = 3
+Number of missing observations = 0
+Data checksum = 23217
+
+Naive occupancy estimate       = 0.4156
+
+NSiteCovs-->1
+site_covname[0]=Elevation
+NSampCovs-->1
+samp_covname[0]=SampCov1
+Primary periods=1 Secondary periods: 3
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Brook Trout
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+modtype=1 N=77 T=3 Groups=1 bootstraps=0
+
+-->1-3**************
+
+
+Predefined Model: Detection probabilities are NOT time-specific
+
+Number of groups               = 1
+Number of parameters           = 2
+Number of function calls           = 52
+-2log(likelihood)              = 228.788558
+AIC                            = 232.788558
+Proportion of sites occupied    (Psi)   = 0.4626 (0.0659)
+
+Detection probabilities         (p):
+  grp   srvy      p            se(p)
+  ---   ----   ---------    -----------
+   1      1    0.533454     ( 0.061678)
+
+Variance-Covariance Matrix
+   psi    p(G1)
+ 0.0043 -0.0013 
+-0.0013  0.0038 
+------------------------------------------------------
+CPU time: 0.0 seconds
+

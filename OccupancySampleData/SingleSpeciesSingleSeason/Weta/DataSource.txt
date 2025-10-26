@@ -1,0 +1,6 @@
+ 
+Weta
+   Single Season Single Species
+
+   This is the Weta dataset that ships with the Presence software.
+   Discussed in Mackenzie et al (2012) 

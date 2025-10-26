@@ -1,0 +1,15 @@
+Grand Skinks
+   Single Species Multi Season^M
+
+   Ships with PRESENCE.
+
+   Data has been collected on 352 tors over a 5 year (the seasons) period,^
+   although not all tors (rock piles) were surveyed each year, with up to 3 surveys^
+   of each tor per year.  
+
+   The 15 columns are in 5 blocks of 3.
+
+   There is also a site-specific covariate Pasture indicating whether the surrounding^
+   matrix is either predominately the modified habitat (farm pasture, Pasture =1) or
+   "native" grassland (tussock, Pasture = 0).
+ 

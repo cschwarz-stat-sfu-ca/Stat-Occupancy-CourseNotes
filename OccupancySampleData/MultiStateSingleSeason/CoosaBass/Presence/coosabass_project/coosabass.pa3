@@ -1,0 +1,20 @@
+TITLE:Coose Bass
+DATAFILE:coosabass.pao
+SITECOVFILE:
+NSITES:54
+NSURVEYS:4
+NSRVY/SEASON:4
+NMETH/SRVY:1
+NSITECOV:2
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:NA
+NMODELS:3
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi,R,   p1(*)=p2(*)(L)     ,deta(*)(L)	  360.74	     0.00	   0.9999	   1.0000	    8	  344.74	
+psi,R,   p1(*)=p2(*)(CV)     ,deta(*)(CV)	  380.02	    19.28	   0.0001	   0.0001	    8	  364.02	
+psi,R,    p1(*)=,p2(*),   delta(*)	  389.20	    28.46	   0.0000	   0.0000	    4	  381.20	

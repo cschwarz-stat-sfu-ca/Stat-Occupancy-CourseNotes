@@ -1,0 +1,35 @@
+Blue Gross Beaks.
+  
+Downloaded from https://sites.google.com/site/asrworkshop/home/schedule/r-occupancy-1
+
+
+
+An occupancy study was made on Blue Grosbeaks (Guiraca caerulea) on 41 old fields planted 
+to longleaf pines (Pinus palustris) in southern Georgia, USA. 
+
+
+
+Surveys were 500 m transects across each field and were completed three 
+times during the breeding season in 2001.  
+
+The data are located in a comma-delimited 
+text file. 
+
+
+
+The first column (which is optional) is a label for each site, simple numbered 1 - 41.  
+The next 3 columns are the detection histories for each site on each of 3 occasions during the 2001 breeding season.    
+
+
+Other covariates are:
+   
+field.size - size of the files
+
+   bqi Enrollment in bobwihte quail initiative; does occupancy increase if field belongs to this initiative?
+   
+crop.hist
+   
+crop1
+crop2	
+ 
+   count1, count2, count3 are actual counts of animals detected in each detection period, and are not used in the basic occupancy analysis.

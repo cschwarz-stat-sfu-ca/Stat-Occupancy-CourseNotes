@@ -1,0 +1,58 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Sat Oct 22 22:58:24 2011,       Version 4.0111018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=amtoad.pao
+==>l=pres_1_group__Constant_P.out
+==>name=1 group, Constant P
+==>model=11c
+==>j=c:\documents and settings\cschwarz\desktop\occupancysampledata\amtoad_project\amtoad_project\amtoad.dm
+==>lmt=200
+model=11c N,T-->29,82
+modtype-->1 
+
+********* Input Data summary *******
+Number of sites                = 29
+Number of sampling occasions   = 82
+Number of missing observations = 2120
+Data checksum = 63614
+
+Naive occupancy estimate       = 0.3448
+
+NSiteCovs-->1
+site_covname[0]=Pond
+NSampCovs-->1
+samp_covname[0]=Temp
+Primary periods=1 Secondary periods: 82
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ American Toad
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+modtype=1 N=29 T=82 Groups=1 bootstraps=0
+
+-->1-82**************
+
+
+Predefined Model: Detection probabilities are NOT time-specific
+
+Number of groups               = 1
+Number of parameters           = 2
+Number of function calls           = 59
+-2log(likelihood)              = 179.859440
+AIC                            = 183.859440
+
+varcov: nsig=6 eps=1.000000e-002
+Proportion of sites occupied    (Psi)   = 0.4918 (0.1324)
+
+Detection probabilities         (p):
+  grp   srvy      p            se(p)
+  ---   ----   ---------    -----------
+   1      1    0.188674     ( 0.035524)
+
+Variance-Covariance Matrix
+   psi    p(G1)
+ 0.0175 -0.0017 
+-0.0017  0.0013 
+------------------------------------------------------
+CPU time: 0.0 seconds
+

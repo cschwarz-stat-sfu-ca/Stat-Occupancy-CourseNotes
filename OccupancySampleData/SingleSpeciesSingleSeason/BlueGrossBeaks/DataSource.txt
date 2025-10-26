@@ -1,0 +1,7 @@
+ 
+Blue Gross Beaks
+   Single Season Single Species
+
+   Data from an occupancy course from Mike Conroy at
+      https://sites.google.com/site/asrworkshop/home/schedule/r-occupancy-1
+

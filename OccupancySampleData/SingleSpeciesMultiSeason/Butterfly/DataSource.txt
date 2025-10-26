@@ -1,0 +1,7 @@
+ 
+Butterfly
+   Single Season Multi Species
+
+   Source is Mike Conroy’s notes on the web.
+   Details unknown about this dataset - poke around his web pages for details.
+ 

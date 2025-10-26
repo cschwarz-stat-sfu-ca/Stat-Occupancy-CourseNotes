@@ -1,0 +1,7 @@
+ 
+Salamanders
+   Single Season Single Species
+
+   Ships with Presence.
+   Discussed in Mackenzie et al (2006) Chapter 4.
+   Missing values added at random to illustrate how to deal with missing data.

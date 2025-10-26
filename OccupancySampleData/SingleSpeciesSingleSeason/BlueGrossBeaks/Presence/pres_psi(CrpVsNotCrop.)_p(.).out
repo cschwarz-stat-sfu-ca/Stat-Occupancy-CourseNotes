@@ -1,0 +1,40 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Wed Feb 14 13:21:12 2018,       Version 2.12.9.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>C:\Progra~2\Presence\presence.exe
+==>i=e:\stat-occupancy\occupancycourse-2018-02-12\coursenotes\occupancysampledata\bluegrossbeaks\bg-cov.pao
+==>l=pres_psi(CrpVsNotCrop.)_p(.).out
+==>name=psi(CrpVsNotCrop.),p(.)
+==>j=gb-cov.dm
+varcov: nsig=6 eps=1.000000e-002
+no model name N,T-->41,3
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 41
+Number of sampling occasions   = 3
+Number of states               = 2
+Number of missing observations = 0
+Data checksum = 12422
+
+NSiteCovs-->3
+site_covname[0]=FS
+site_covname[1]=logFS
+site_covname[2]=CropNotCrop
+NSampCovs-->0
+Primary periods=1 Secondary periods: 3
+Naive occupancy estimate       = 0.8049
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ grossbeak covariates
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=41 T=3 Groups=1 bootstraps=0
+
+-->1-3
+Matrix 1: rows=2, cols=3
+            -,a1,a2,
+psi           1ERROR: covar name not found (CropVsNotCrop)

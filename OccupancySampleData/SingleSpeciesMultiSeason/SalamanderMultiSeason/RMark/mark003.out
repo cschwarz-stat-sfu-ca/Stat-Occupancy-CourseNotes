@@ -1,0 +1,223 @@
+
+   Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:55    Page  001
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   This version was compiled by GCC version 8.1.0 using the options: 
+     -cpp -D__DYNAMIC__ -D IEEE -D DBLEPRECISION -fPIC -m64
+     -mmacosx-version-min=10.11.0 -mtune=core2 -O2 -fimplicit-none -fbounds-check
+     -funroll-loops -ftree-vectorize -ffpe-summary=invalid,zero,overflow,underflow
+     -fno-unsafe-math-optimizations -frounding-math -fsignaling-nans -fopenmp.
+
+   This problem will use 7 of 8 possible threads.
+
+
+  INPUT --- proc title ;
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+
+  INPUT --- proc chmatrix occasions= 10 groups= 2 etype= RDOccupEG 
+  INPUT --- Nodes= 101 ICMeans NoHist  hist= 22 ;
+
+  INPUT ---    time interval 0 0 0 0 1 0 0 0 0 ;
+
+  INPUT ---    glabel(1)=ProxNo;
+
+  INPUT ---    glabel(2)=ProxYes;
+
+   * *  WARNING  * *   At least a pair of the encounter histories are duplicates. 
+
+      Number of unique encounter histories read was 20.
+
+      Number of individual covariates read was 0.
+      Time interval lengths vary and/or not equal to 1.
+
+      Data type number is 30
+      Data type is Robust Design Occupancy Estimation with psi(1), gamma, epsilon.                                     
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:55    Page  002
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc estimate link=Logit NOLOOP varest=2ndPart    ;
+
+
+  INPUT --- model={ Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) };
+
+  INPUT ---    group=1 Psi    rows=1 cols=1 Square ;
+  INPUT ---        1 ;
+
+  INPUT ---    group=2 Psi    rows=1 cols=1 Square ;
+  INPUT ---        2 ;
+
+  INPUT ---    group=1 Epsilon    rows=1 cols=1 Square ;
+  INPUT ---        3 ;
+
+  INPUT ---    group=2 Epsilon    rows=1 cols=1 Square ;
+  INPUT ---        3 ;
+
+  INPUT ---    group=1 Gamma    rows=1 cols=1 Square ;
+  INPUT ---        4 ;
+
+  INPUT ---    group=2 Gamma    rows=1 cols=1 Square ;
+  INPUT ---        5 ;
+
+  INPUT ---    group=1 p  Session 1  rows=1 cols=5 Square ;
+  INPUT ---        6 6 6 6 6 ;
+
+  INPUT ---    group=1 p  Session 2  rows=1 cols=5 Square ;
+  INPUT ---        6 6 6 6 6 ;
+
+  INPUT ---    group=2 p  Session 1  rows=1 cols=5 Square ;
+  INPUT ---        6 6 6 6 6 ;
+
+  INPUT ---    group=2 p  Session 2  rows=1 cols=5 Square ;
+  INPUT ---        6 6 6 6 6 ;
+
+  INPUT ---    design matrix constraints=6 covariates=6;
+  INPUT ---        1 0 0 0 0 0;
+  INPUT ---        1 1 0 0 0 0;
+  INPUT ---        0 0 1 0 0 0;
+  INPUT ---        0 0 0 1 0 0;
+  INPUT ---        0 0 0 1 1 0;
+  INPUT ---        0 0 0 0 0 1;
+  INPUT ---       blabel(1)=Psi:(Intercept);
+  INPUT ---       blabel(2)=Psi:ProxYes;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:55    Page  003
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       blabel(3)=Epsilon:(Intercept);
+  INPUT ---       blabel(4)=Gamma:(Intercept);
+  INPUT ---       blabel(5)=Gamma:ProxYes;
+  INPUT ---       blabel(6)=p:(Intercept);
+  INPUT ---       rlabel(1)=Psi gNo a0 t1;
+  INPUT ---       rlabel(2)=Psi gYes a0 t1;
+  INPUT ---       rlabel(3)=Epsilon gNo a0 t1;
+  INPUT ---       rlabel(4)=Gamma gNo a0 t1;
+  INPUT ---       rlabel(5)=Gamma gYes a0 t1;
+  INPUT ---       rlabel(6)=p gNo s1 t1;
+
+ Link Function Used is LOGIT        
+
+ Variance Estimation Procedure Used is 2ndPart 
+ -2logL(saturated) = 144.22882     
+ Effective Sample Size = 78
+
+ Number of function evaluations was 59 for 6 parameters.
+ Time for numerical optimization was 0.04 seconds.     
+ -2logL { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 296.69921     
+ Penalty { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 0.0000000     
+ Gradient { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }:
+ -0.1598356E-05 -0.5888899E-06 -0.1468785E-05   0.000000       0.000000    
+   0.000000    
+ Maximum ABS(G) { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 0.1598356E-05 
+ S Vector { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }:
+   35.21561      3.215426      2.590462      1.058313     0.4929677E-01
+  0.1320313E-06
+ Time to compute number of parameters was 0.01 seconds.     
+ Ratio Threshold = 50.000000       Max Gap (5/6) = 373371.86       Next Max Gap (4/5) = 21.468194     
+ Gap Method for Num. of Estimated Parameters { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 5          
+ Threshold { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 0.3196711E-05                 
+ Numerical Threshold Method for Num. of Estimated Parameters { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 5          
+ Number of Estimated Parameters { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 5          
+ DEVIANCE { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 152.47039                     
+ DEVIANCE Degrees of Freedom { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 17            
+ c-hat { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 8.9688467                     
+ AIC { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 306.69921                  
+ AICc { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 307.53255                    
+ BIC { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 318.48276                    
+ Pearson Chisquare { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 3871.5487                  
+ Possible Encounter Histories { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 2048             
+ Pearson Chisquare df { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 2041        
+ Pearson chat { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 1.8968881                  
+ Sum(Observed/Expected) { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 3881.1057                  
+ s-bar { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 0.8959461                  
+ Fletcher chat { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) } = 1.0004969                  
+
+
+          LOGIT Link Function Parameters of { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }
+                                                              95% Confidence Interval
+ Parameter                    Beta         Standard Error      Lower           Upper
+ -------------------------  --------------  --------------  --------------  --------------
+    1:Psi:(Intercept)       -1.3866388       0.5747114      -2.5130731      -0.2602044    
+    2:Psi:ProxYes            5.4777769       4.4985579      -3.3393967       14.294950    
+    3:Epsilon:(Intercept)   -1.5971781       0.9920638      -3.5416232       0.3472670    
+    4:Gamma:(Intercept)     -0.9553954       0.6083338      -2.1477297       0.2369390    
+    5:Gamma:ProxYes         -12.571618       2752.0832      -5406.6548       5381.5116    
+    6:p:(Intercept)         -0.8408040       0.1845630      -1.2025475      -0.4790605    
+
+
+          Real Function Parameters of { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }
+                                                               95% Confidence Interval
+  Parameter                  Estimate       Standard Error      Lower           Upper
+ --------------------------  --------------  --------------  --------------  --------------
+     1:Psi gNo a0 t1          0.1999449       0.0919348       0.0749468       0.4353135                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:55    Page  004
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+     2:Psi gYes a0 t1         0.9835548       0.0724197       0.0091536       0.9999974                          
+     3:Epsilon gNo a0 t1      0.1683764       0.1389145       0.0281508       0.5859547                          
+     4:Gamma gNo a0 t1        0.2778011       0.1220486       0.1045436       0.5589592                          
+     5:Gamma gYes a0 t1       0.1334419E-05   0.0036724      0.7422963E-314   1.0000000                          
+     6:p gNo s1 t1            0.3013655       0.0388587       0.2310223       0.3824740                          
+
+
+                      Estimates of Derived Parameters
+
+
+          Psi Estimates of { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Psi-hat         Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    0.1999449       0.0919348       0.0197526       0.3801372    
+   1     2    0.3885351       0.1090783       0.1747415       0.6023286    
+   2     1    0.9835548       0.0724199       0.8416117       1.1254979    
+   2     2    0.8179474       0.1378072       0.5478454       1.0880494    
+
+  
+    Lambda Estimates of { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Lambda-hat      Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    1.9432106       0.8460180       0.2850153       3.6014059    
+   2     1    0.8316236       0.1389145       0.5593512       1.1038961    
+
+  
+    Lambda' Estimates of { Psi(~Prox)Epsilon(~1)Gamma(~Prox)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Lambda'-hat     Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    2.5425425       1.4722205      -0.3430098       5.4280947    
+   2     1    0.0751225       0.3268544      -0.5655123       0.7157572    
+
+ Attempted ordering of parameters by estimatibility:
+  6 1 4 3 2 5
+ Beta number 5 is a singular value.
+
+   CPU Time for the last procedure was 0.05 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:55    Page  005
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc stop;
+
+     CPU Time in minutes for this job was 0.00
+
+     Time Start = 12:05:55.090   Time End = 12:05:55.115
+
+     Wall Clock Time in minutes for this job was 0.00
+
+
+          E X E C U T I O N   S U C C E S S F U L 

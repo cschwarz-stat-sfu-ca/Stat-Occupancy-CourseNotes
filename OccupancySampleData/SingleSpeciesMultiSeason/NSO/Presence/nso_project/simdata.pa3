@@ -1,0 +1,27 @@
+TITLE:file=e:\y\presence\source\new2\sample_data\nso.pao
+DATAFILE:\\vboxsvr\cschwarz-desktop\occupancycourse\occupancysampledata\nso\nso_project\simdata.pao
+SITECOVFILE:
+NSITES:55
+NSURVEYS:40
+NRVY/SEASON:8,8,8,8,8
+NSITECOV:0
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:220
+NMODELS:11
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(),gamma(),p()	    0.00	  -100.00	2.42685094451167206E21	   1.0000	    0	    0.00	
+psi(*),gamma(year),p(year)	 1349.34	     0.00	   0.4681	   0.0000	   10	 1329.34	
+psi(TimeTrend),gamma(season),p(season)	 1350.45	     1.11	   0.2687	   0.0000	   11	 1328.45	
+psi(*),gamma(*),p(year)	 1351.95	     2.61	   0.1269	   0.0000	    7	 1337.95	
+psi,gamma(),eps(),p(year)	 1353.52	     4.18	   0.0579	   0.0000	    8	 1337.52	
+psi,gamma(),eps(),p(year)	 1353.52	     4.18	   0.0579	   0.0000	    8	 1337.52	
+psi,gamma(year),eps(year),p(year)	 1355.64	     6.30	   0.0201	   0.0000	   14	 1327.64	
+psi,gamma(*),eps(*),p(*)	 1363.32	    13.98	   0.0004	   0.0000	    4	 1355.32	
+psi(.),gam(*),eps=1-gam,p(year)	 1443.53	    94.19	   0.0000	   0.0000	    7	 1429.53	
+psi(.),gam(year),eps=1-gam,p(year)	 1449.32	    99.98	   0.0000	   0.0000	   10	 1429.32	
+psi,gamma(NONE),eps(NONE),p(year)	 1558.56	   209.22	   0.0000	   0.0000	    8	 1542.56	

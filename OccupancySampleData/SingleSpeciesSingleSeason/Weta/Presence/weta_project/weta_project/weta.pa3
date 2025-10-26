@@ -1,0 +1,25 @@
+TITLE:weta
+DATAFILE:weta.pao
+SITECOVFILE:
+NSITES:72
+NSURVEYS:5
+NRVY/SEASON:5
+NSITECOV:2
+NSRVYCOV:3
+CHAT:Cancel
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:100
+NMODELS:9
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(browse) ,p(t + obs)	  257.60	     0.00	   0.3370	   1.0000	    9	  239.60	
+psi(*) ,p(t + obs)	  258.55	     0.95	   0.2096	   0.6219	    8	  242.55	
+psi(*) ,p(t + obs + browse)	  259.41	     1.81	   0.1363	   0.4045	    9	  241.41	
+psi(browse) ,p(t)	  259.44	     1.84	   0.1343	   0.3985	    7	  245.44	
+psi(browse) ,p(t + obs + browse)	  259.60	     2.00	   0.1240	   0.3679	   10	  239.60	
+psi(browse) ,p(observer)	  262.04	     4.44	   0.0366	   0.1086	    5	  252.04	
+psi(browse) ,p(.) - cell effects	  264.26	     6.66	   0.0121	   0.0358	    3	  258.26	
+psi(*) p(*)	  265.79	     8.19	   0.0056	   0.0167	    2	  261.79	
+psi(browse) ,p(browse)	  266.26	     8.66	   0.0044	   0.0132	    4	  258.26	

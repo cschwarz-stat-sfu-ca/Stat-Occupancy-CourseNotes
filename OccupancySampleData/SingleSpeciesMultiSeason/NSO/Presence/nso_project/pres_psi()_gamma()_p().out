@@ -1,0 +1,11 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Wed Oct 26 18:31:34 2011,       Version 4.0111018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=nso.inp
+==>l=pres_psi()_gamma()_p().out
+==>name=psi(),gamma(),p()
+==>model=220
+==>j=\\Vboxsvr\cschwarz-desktop\OccupancyCourse\OccupancySampleData\NSO\nso_project\nso.dm
+==>lmt=200

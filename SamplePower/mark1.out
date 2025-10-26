@@ -1,0 +1,119 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Thu Apr 18 09:00:27 2013,       Version 5.8_130315
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=genpres.pao
+==>l=mark.out
+==>j=genpres.dm
+==>model=100
+==>quiet
+==>boot2=0
+==>pool=0
+==>name=Psi,p(.)
+varcov: nsig=6 eps=1.000000e-002
+model=100 N,T-->16,3
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 100
+Number of sampling occasions   = 3
+Number of missing observations = 0
+Data checksum = 4848
+
+NSiteCovs-->1
+site_covname[0]=grp1
+NSampCovs-->0
+Primary periods=3 Secondary periods: 1 1 1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ generated data from genpres4
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=16 T=3 Groups=1 bootstraps=0
+
+-->site18
+Matrix 1: rows=2, cols=2
+            -,a1,a2
+psi           1
+========================
+
+Matrix 2: rows=4, cols=2
+            -,d1
+p1            1
+p2            1
+p3            1
+========================
+
+Matrix 3: rows=0, cols=0
+========================
+
+Matrix 4: rows=0, cols=0
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+
+modtype=1
+
+Custom Model:
+
+Number of parameters           = 2
+Number of significant digits   =   7.6
+
+Model has been fit using the logistic link.
+
+
+Number of parameters           = 2
+Number of function calls           = 58
+-2log(likelihood)              = 342.6999
+AIC                            = 346.6999
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psi                              :   0.405465    0.260208
+B1   p1                               :   0.000000    0.197202
+
+============================================================
+
+   Individual Site estimates of <psi> 
+                Site               estimate  Std.err   95% conf. interval
+psi             1 site1           :  0.6000   0.0624     0.4739 - 0.7141
+
+============================================================
+
+   Individual Site estimates of <p1> 
+                Site               estimate  Std.err   95% conf. interval
+p1              1 site1           :  0.5000   0.0493     0.4046 - 0.5954
+p2              1 site1           :  0.5000   0.0493     0.4046 - 0.5954
+p3              1 site1           :  0.5000   0.0493     0.4046 - 0.5954
+
+============================================================
+
+
+ DERIVED parameter - Psi-conditional = [Pr(occ | detection history)]
+
+        Site                     psi-cond  Std.err     95% conf. interval
+     1    site1                    0.1579  0.0620     0.0699 - 0.3188 
+     2    site2                    1.0000  0.0000     1.0000 - 1.0000 
+     3    site3                    1.0000  0.0000     1.0000 - 1.0000 
+     4    site4                    1.0000  0.0000     1.0000 - 1.0000 
+     5    site5                    1.0000  0.0000     1.0000 - 1.0000 
+     6    site6                    1.0000  0.0000     1.0000 - 1.0000 
+     7    site7                    1.0000  0.0000     1.0000 - 1.0000 
+     8    site8                    1.0000  0.0000     1.0000 - 1.0000 
+     9    site9                    0.1579  0.0620     0.0699 - 0.3188 
+    10   site10                    1.0000  0.0000     1.0000 - 1.0000 
+    11   site11                    1.0000  0.0000     1.0000 - 1.0000 
+    12   site12                    1.0000  0.0000     1.0000 - 1.0000 
+    13   site13                    1.0000  0.0000     1.0000 - 1.0000 
+    14   site14                    1.0000  0.0000     1.0000 - 1.0000 
+    15   site15                    1.0000  0.0000     1.0000 - 1.0000 
+    16   site16                    1.0000  0.0000     1.0000 - 1.0000 
+
+CPU time= 0.0 seconds
+

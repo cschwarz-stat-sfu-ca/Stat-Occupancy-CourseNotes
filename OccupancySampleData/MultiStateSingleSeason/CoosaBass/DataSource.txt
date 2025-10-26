@@ -1,0 +1,15 @@
+
+Coosa Bass
+   MultiState Single Season
+
+   http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html^M
+   This example is of Coosa bass collected via electrofishing from four 50-80 m sections
+   in streams at 54 sites in the Upper Coosa River basin. The objective was to evaluate
+   the effect of streamflow variability on Coosa bass reproduction. 
+
+   States
+     species not detected (state = 0). 
+     adult present (state = 1)
+     YOY present (state = 2)  
+
+   

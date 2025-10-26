@@ -1,0 +1,15 @@
+                                        Coose Bass
+
+     Real Function Parameters of {psi1(CV), psi2(CV)    p(*,*)(CV)     delta(*)(CV)}
+      Following estimates based on unstandardized individual covariate values:
+          Variable   Value         
+          ---------  ------------- 
+          STDLINK    0.1146296     
+          CVFLOW     1.4740741     
+                                                              95% Confidence Interval
+ Parameter                  Estimate       Standard Error      Lower           Upper
+ -------------------------  --------------  --------------  --------------  --------------
+    1:Psi1                  0.7791676       0.0566913       0.6490920       0.8706360                           
+    2:Psi2                  0.9928570       0.0379270       0.0038825       0.9999998                           
+    3:p1                    0.8032069       0.0311395       0.7350373       0.8572442                           
+    4:Delta                 0.3902876       0.0780279       0.2518470       0.5489869                           

@@ -1,0 +1,20 @@
+
+Two species of trout Co-occurrence
+   Multi season single season
+
+   Sample dataset from Parks Canada. Random noise added to values of variables
+   to preserve anonymity.
+
+   BKTR and BLTR measured in watersheds in Alberta
+   Bull trout are native and require cold water; brook trout are from the east
+   and are supposed to have warmer temperature preferences.
+
+   Each site was sampled twice, represented as "rep1" and "rep2"
+   in the database. 
+
+   I have more than a lot of predictors, but the two
+   predictors of occupancy that I would be most interested in are temperature
+   and discharge
+
+
+    

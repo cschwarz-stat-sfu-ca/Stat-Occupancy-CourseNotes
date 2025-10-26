@@ -1,0 +1,202 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Wed Feb 14 18:51:25 2018,       Version 2.12.9.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>C:\Progra~2\Presence\presence.exe
+==>i=salamander..pao
+==>l=pres_1_group__Constant_P_-_II.out
+==>name=1 group, Constant P - II
+==>j=salamander..dm
+==>boot2=100
+varcov: nsig=6 eps=1.000000e-002
+no model name N,T-->39,5
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 39
+Number of sampling occasions   = 5
+Number of states               = 2
+Number of missing observations = 0
+Data checksum = 29349
+
+NSiteCovs-->0
+NSampCovs-->0
+Primary periods=1 Secondary periods: 5
+Naive occupancy estimate       = 0.4615
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Salamander Example
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=39 T=5 Groups=1 bootstraps=0
+
+-->1-5
+Matrix 1: rows=2, cols=2
+            -,a1,
+psi           1
+========================
+
+Matrix 2: rows=6, cols=2
+            -,b1,
+P1[1]         1
+P1[2]         1
+P1[3]         1
+P1[4]         1
+P1[5]         1
+========================
+
+Matrix 3: rows=0, cols=0
+========================
+
+Matrix 4: rows=0, cols=0
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+
+modtype=1
+
+Custom Model: 1 group, Constant P - II
+
+attempt 0/0 (iv= 0.00  0.00 -0.00...), optmiz done. -2loglike= 161.7586
+0 random initial value vectors attempted:
+Initial values:
+    0.0000    0.0000
+Number of significant digits   =   7.9
+
+Model has been fit using the logistic link.
+
+
+Number of parameters           = 2
+Number of function calls           = 57
+-2log(likelihood)              = 161.7586
+AIC                            = 165.7586
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psi.a1                           :   0.383108    0.508589
+B1   P1[5].b1                         :  -1.052585    0.300851
+
+============================================================
+
+   Individual Site estimates of <psi>
+                Site               estimate  Std.err   95% conf. interval
+psi             1 site1           :  0.5946   0.1226     0.3512 -  0.7990
+
+============================================================
+
+   Individual Site estimates of <P1[1]>
+                Site               estimate  Std.err   95% conf. interval
+P1[1]           1 site1           :  0.2587   0.0577     0.1622 -  0.3863
+P1[2]           1 site1           :  0.2587   0.0577     0.1622 -  0.3863
+P1[3]           1 site1           :  0.2587   0.0577     0.1622 -  0.3863
+P1[4]           1 site1           :  0.2587   0.0577     0.1622 -  0.3863
+P1[5]           1 site1           :  0.2587   0.0577     0.1622 -  0.3863
+
+============================================================
+
+
+ DERIVED parameter - Psi-conditional = [Pr(occ | detection history)]
+
+        Site                     psi-cond  Std.err     95% conf. interval
+psi-cond     1    site1        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     2    site2        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     3    site3        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     4    site4        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     5    site5        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     6    site6        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     7    site7        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     8    site8        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     9    site9        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    10   site10        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    11   site11        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    12   site12        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    13   site13        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    14   site14        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    15   site15        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    16   site16        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    17   site17        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    18   site18        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    19   site19        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    20   site20        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    21   site21        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    22   site22        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    23   site23        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    24   site24        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    25   site25        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    26   site26        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    27   site27        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    28   site28        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    29   site29        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    30   site30        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    31   site31        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    32   site32        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    33   site33        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    34   site34        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    35   site35        :   0.2472  0.1472     0.0651 - 0.6074 
+psi-cond    36   site36        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    37   site37        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    38   site38        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    39   site39        :   1.0000  0.0000     1.0000 - 1.0000 
+
+============================================================
+
+Assessing Model Fit for Single-season model:
+
+History(cohort)		Observed        Expected        Chi-square
+00011( 0 0)          1.0000      0.632306119         0.21
+01000( 0 1)          2.0000      1.811586527         0.02
+11110( 0 3)          1.0000      0.077030726        11.06
+00100( 0 4)          5.0000      1.811586527         5.61
+10000( 0 9)          1.0000      1.811586527         0.36
+00111( 0 10)          2.0000      0.220696623        14.35
+10011( 0 12)          1.0000      0.220696623         2.75
+10110( 0 13)          1.0000      0.220696623         2.75
+00000( 0 14)         21.0000     20.999999940         0.00
+00010( 0 35)          2.0000      1.811586527         0.02
+00001( 0 37)          2.0000      1.811586527         0.02
+Test Statistic =     44.7261 min(expect)=7.703073e-002
+
+------------------------------------------------------
+Test Statistic (data)    =         44.7261
+
+From 100 parametric bootstraps...
+Probability of test statistic >= observed = 0.0396
+Lowest  simulated Test Stat =         10.7058
+Average simulated Test Stat =         27.8241
+Median simulated Test Stat =         26.5126
+Highest simulated Test Stat =         53.0129
+Estimate of c-hat = 1.6075   (=TestStat/AvgTestStat)
+------------------------------------------------------
+- Distribution of simulated test statistics ----------
+ TestStat  Prop.
+  3.9760   0.0000:*
+  6.6266   0.0100:*
+  9.2773   0.0100:*
+ 11.9279   0.0100:*
+ 14.5785   0.0100:*
+ 17.2292   0.0100:*
+ 19.8798   0.0400:****
+ 22.5305   0.1000:*********
+ 25.1811   0.1600:*************
+ 27.8318   0.1400:************
+ 30.4824   0.1600:*************
+ 33.1330   0.1000:*********
+ 35.7837   0.0600:*****
+ 38.4343   0.0600:*****
+ 41.0850   0.0600:*****
+ 43.7356   0.0100:*
+ 46.3863   0.0200:**
+ 49.0369   0.0100:*
+ 51.6876   0.0100:*
+ 54.3382   0.0100:*
+------------------------------------------------------
+
+CPU time= 1 seconds (0.02 min)
+

@@ -1,0 +1,188 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Wed Feb 14 12:30:25 2018,       Version 2.12.9.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>C:\Progra~2\Presence\presence.exe
+==>i=gb-cov.pao
+==>l=pres_psi(fs)___p(.).out
+==>name=psi(fs)   p(.)
+==>j=gb-cov.dm
+varcov: nsig=6 eps=1.000000e-002
+no model name N,T-->41,3
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 41
+Number of sampling occasions   = 3
+Number of states               = 2
+Number of missing observations = 0
+Data checksum = 12422
+
+NSiteCovs-->1
+site_covname[0]=FS
+NSampCovs-->0
+Primary periods=1 Secondary periods: 3
+Naive occupancy estimate       = 0.8049
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ grossbeak covariates
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=41 T=3 Groups=1 bootstraps=0
+
+-->1-3
+Matrix 1: rows=2, cols=3
+            -,a1,a2,
+psi           1 FS
+========================
+
+Matrix 2: rows=4, cols=2
+            -,b1,
+P[1]          1
+P[2]          1
+P[3]          1
+========================
+
+Matrix 3: rows=0, cols=0
+========================
+
+Matrix 4: rows=0, cols=0
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+
+modtype=1
+
+Custom Model: psi(fs)   p(.)
+
+attempt 0/0 (iv= 0.00  0.00  0.00...), optmiz done. -2loglike= 170.4410
+0 random initial value vectors attempted:
+Initial values:
+    0.0000    0.0000    0.0000
+Number of significant digits   =   7.6
+
+Model has been fit using the logistic link.
+
+
+Number of parameters           = 3
+Number of function calls           = 51
+-2log(likelihood)              = 170.4410
+AIC                            = 176.4410
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psi.a1                           :   0.673019   10.000000
+A2   psi.FS                           :  10.723590   10.000000
+B1   P[3].b1                          :  -0.048790    0.180388
+
+============================================================
+
+   Individual Site estimates of <psi>
+                Site               estimate  Std.err   95% conf. interval
+psi             1 site1           :  1.0000   0.0000     0.0000 -  1.0000
+psi             2 site2           :  1.0000   0.0000     0.0000 -  1.0000
+psi             3 site3           :  1.0000   0.0000     0.0000 -  1.0000
+psi             4 site4           :  1.0000   0.0000     0.0000 -  1.0000
+psi             5 site5           :  1.0000   0.0000     0.0000 -  1.0000
+psi             6 site6           :  1.0000   0.0000     0.0000 -  1.0000
+psi             7 site7           :  1.0000   0.0000     0.0000 -  1.0000
+psi             8 site8           :  1.0000   0.0000     0.0000 -  1.0000
+psi             9 site9           :  1.0000   0.0000     0.0000 -  1.0000
+psi            10 site10          :  1.0000   0.0000     0.0000 -  1.0000
+psi            11 site11          :  1.0000   0.0000     0.0000 -  1.0000
+psi            12 site12          :  1.0000   0.0000     0.0000 -  1.0000
+psi            13 site13          :  1.0000   0.0000     0.0000 -  1.0000
+psi            14 site14          :  1.0000   0.0000     0.0000 -  1.0000
+psi            15 site15          :  1.0000   0.0000     0.0000 -  1.0000
+psi            16 site16          :  1.0000   0.0000     0.0000 -  1.0000
+psi            17 site17          :  1.0000   0.0000     0.0000 -  1.0000
+psi            18 site18          :  1.0000   0.0000     0.0000 -  1.0000
+psi            19 site19          :  1.0000   0.0000     0.0000 -  1.0000
+psi            20 site20          :  1.0000   0.0000     0.0000 -  1.0000
+psi            21 site21          :  1.0000   0.0000     0.0000 -  1.0000
+psi            22 site22          :  1.0000   0.0000     0.0000 -  1.0000
+psi            23 site23          :  1.0000   0.0000     0.0000 -  1.0000
+psi            24 site24          :  1.0000   0.0000     0.0000 -  1.0000
+psi            25 site25          :  1.0000   0.0000     0.0000 -  1.0000
+psi            26 site26          :  1.0000   0.0000     0.0000 -  1.0000
+psi            27 site27          :  1.0000   0.0000     0.0000 -  1.0000
+psi            28 site28          :  1.0000   0.0000     0.0000 -  1.0000
+psi            29 site29          :  1.0000   0.0000     0.0000 -  1.0000
+psi            30 site30          :  1.0000   0.0000     0.0000 -  1.0000
+psi            31 site31          :  1.0000   0.0000     0.0000 -  1.0000
+psi            32 site32          :  1.0000   0.0000     0.0000 -  1.0000
+psi            33 site33          :  1.0000   0.0000     0.0000 -  1.0000
+psi            34 site34          :  1.0000   0.0000     0.0000 -  1.0000
+psi            35 site35          :  1.0000   0.0000     0.0000 -  1.0000
+psi            36 site36          :  1.0000   0.0000     0.0000 -  1.0000
+psi            37 site37          :  1.0000   0.0000     0.0000 -  1.0000
+psi            38 site38          :  1.0000   0.0000     0.0000 -  1.0000
+psi            39 site39          :  1.0000   0.0000     0.0000 -  1.0000
+psi            40 site40          :  1.0000   0.0000     0.0000 -  1.0000
+psi            41 site41          :  1.0000   0.0000     0.0000 -  1.0000
+
+============================================================
+
+   Individual Site estimates of <P[1]>
+                Site               estimate  Std.err   95% conf. interval
+P[1]            1 site1           :  0.4878   0.0451     0.4007 -  0.5756
+P[2]            1 site1           :  0.4878   0.0451     0.4007 -  0.5756
+P[3]            1 site1           :  0.4878   0.0451     0.4007 -  0.5756
+
+============================================================
+
+
+ DERIVED parameter - Psi-conditional = [Pr(occ | detection history)]
+
+        Site                     psi-cond  Std.err     95% conf. interval
+psi-cond     1    site1        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     2    site2        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     3    site3        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond     4    site4        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     5    site5        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     6    site6        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     7    site7        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     8    site8        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     9    site9        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    10   site10        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    11   site11        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    12   site12        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    13   site13        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    14   site14        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    15   site15        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    16   site16        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    17   site17        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    18   site18        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    19   site19        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    20   site20        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    21   site21        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    22   site22        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    23   site23        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    24   site24        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    25   site25        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    26   site26        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    27   site27        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    28   site28        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    29   site29        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    30   site30        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    31   site31        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    32   site32        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    33   site33        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    34   site34        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    35   site35        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    36   site36        :   1.0000  0.0000     0.0000 - 0.0000 
+psi-cond    37   site37        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    38   site38        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    39   site39        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    40   site40        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    41   site41        :   1.0000  0.0000     1.0000 - 1.0000 
+
+CPU time= 0 seconds (0.00 min)
+

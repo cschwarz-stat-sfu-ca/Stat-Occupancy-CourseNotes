@@ -1,0 +1,18 @@
+
+Hawk occupancy
+
+   MultiState  Multi Season
+
+   Multiple surveys of hawks to establish occupancy and if breeding.
+   6 years x up to 9 visits/year at a number of territories.   
+
+   Recorded: 
+       NA = site not visited 
+       0 = site visited, but no hawk detected 
+       1 = site visited, hawk detected, but breeding status not confirmedM
+       2 = site visited, breeding status confirmed 
+
+   For each territory, the size of suitable habitat is measured.
+
+ 
+   

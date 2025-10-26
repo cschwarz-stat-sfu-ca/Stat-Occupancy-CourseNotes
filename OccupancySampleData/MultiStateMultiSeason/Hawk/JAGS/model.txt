@@ -1,0 +1,146 @@
+
+############################################################
+var  psi0.dm [nsites, psi0.nbeta], psi0.beta [psi0.nbeta],
+     r0.dm   [nsites, r0.nbeta],   r0.beta   [r0.nbeta],
+     Cpsi.dm [nsites*(nyears-1)*3, Cpsi.nbeta], Cpsi.beta[Cpsi.nbeta],
+     Cr.dm   [nsites*(nyears-1)*3, Cr.nbeta],   Cr.beta[Cr.nbeta],
+     site.year.state[nsites*(nyears-1)*3, 3], 
+     TR      [nsites, nyears-1, 3, 3],        # conditional transition matrices
+     p1.dm   [nobsocc, p1.nbeta],  p1.beta   [p1.nbeta],
+     p2.dm   [nobsocc, p2.nbeta],  p2.beta   [p2.nbeta],
+     delta.dm[nobsocc,delta.nbeta],delta.beta[delta.nbeta],
+     P      [nobsocc, 3, 3],
+     Occ    [nyears, nsites];
+
+model {
+   # Input data consists of
+
+   #   nsites    - number of sites in the occupancy model
+   #   nyears    - number of years in the study
+
+   #   ostate    - observed occupancy state (incremented by 1 because JAGS indexes starting at 1 rather than 0
+   #                ostate=1 = no observed occupancy; =2 is observed in state 1; =3 is observed in state 3)
+   #   ostate.site - site number of observed occupancy state
+   #   ostate.year - year of observed occupancy state
+   #   ostate.survey - survey (within a year) of observed occupancy state
+   #   nobsocc       - number of observed occupancy states
+
+   #   psi0.dm   - design matrix for logit(psi(0)) (initial occupancy probability (state 1 or state 2))
+   #   psi0.nbeta- number of columns in psi0 dm (i.e # of parameters)
+
+   #   r0.dm     - design matrix for logit(r(0))   (initial probability of being in state 2 | in state 1)
+   #   r0.nbeta  - number of columns in r0 dm   (i.e. # of parameters)
+
+   #   Cpsi.dm    - design matrix for conditional probability of occupancy in year t+1 | current state in year t
+   #   Cpsi.nbeta - number of columns in Cpsi.dm
+
+   #   Cr.dm      - design matrix for conditional probability of breeding in year t+1 | current state in year t
+   #   Cr.nbeta   - number of columns in Cr.dm
+
+   #   p1.dm     - design matrix for logit(p1(obsocc)) (probability of detection | actual state is 1 )
+   #   p1.nbeta  - number of columns in p1 dm
+ 
+   #   p2.dm     - design matrix for logit(p2(obsocc)) (probability of detection | actual state is 2 )
+   #   p2.nbeta  - number of columns in p2 dm
+ 
+   #   delta.dm  - design matrix for logit(delta(obsocc)) (probability of detect in state 2 | actual state is 2)
+   #   delta.nbeta- number of columns in delta.dm
+
+   
+   #  compute the initial occupancy and r for each site
+   for(i in 1:nsites){
+      logit(psi0[i]) <- inprod(psi0.dm[i,], psi0.beta[])
+      logit(r0  [i]) <- inprod(r0.dm[i,]  , r0.beta[])
+   }
+
+   #  compute the p1, p2, and delta
+   for(i in 1:nobsocc){
+      logit(p1   [i])    <-  inprod(p1.dm[i,],     p1.beta[])
+      logit(p2   [i])    <-  inprod(p2.dm[i,],     p2.beta[])
+      logit(delta[i])    <-  inprod(delta.dm[i,],  delta.beta[])
+
+      # now for P probability of detection in state i if true state is j
+      # index for P[ observed occupancy, true state, obs state]
+      #                                                    Observed State                                        
+      #                                    0                    1                           2 
+      #------------------------------------------------------------------------------------------------
+      #True State           0|             1                    0                           0         
+      #                     1|             1 - p[1]            p[1]                         0         
+      #                     2|             1 - p[2]            p[2]*(1 - Delta[2,2])    p[2]*Delta[2,2]
+      P[i, 0+1, 0+1] <- 1  # don't forget that JAGS index from 1 rather than 9
+      P[i, 0+1, 1+1] <- 0
+      P[i, 0+1, 2+1] <- 0
+      P[i, 1+1, 0+1] <- 1-p1[i]
+      P[i, 1+1, 1+1] <- p1[i]
+      P[i, 1+1, 2+1] <- 0
+      P[i, 2+1, 0+1] <- 1-p2[i]
+      P[i, 2+1, 1+1] <- p2[i]*(1-delta[i])
+      P[i, 2+1, 2+1] <- p2[i]*delta[i]
+   }
+
+   #  compute phi0 (for each site) which is p(occupancy in state 0, 1, or 2)
+   phi0[0+1, 1:nsites] = 1 - psi0[1:nsites]                # state 0. Don't forget that JAGS starts at index 1
+   phi0[1+1, 1:nsites] = psi0[1:nsites] * (1-r0[1:nsites]) # state 1
+   phi0[2+1, 1:nsites] = psi0[1:nsites] * r0[1:nsites]     # state 2
+
+   #  compute the transition matrix (site, year,)
+   # The parameters Psi[0], Psi[1], Psi[2], R[0,2], R[1,2], and R[2,2] are used to construct 
+   # the Phi_t matrix for transitions each interval (midway down second column page 826 of MacKenzie et al. 2009):
+   #  
+   #  1 - Psi[0](t)          Psi[0](t)*{1 - R[0,2](t)}          Psi[0](t)*R[0,2](t)
+   #  1 - Psi[1](t)          Psi[1](t)*{1 - R[1.2](t)}          Psi[1](t)*R[1,2](t)
+   #  1 - Psi[2](t)          Psi[2](t)*{1 - R[2,2](t)}          Psi[2](t)*R[2,2](t)
+   for(i in 1:(nsites*(nyears-1)*3)){
+      logit(Cpsi[i]) = inprod(Cpsi.dm[i,],     Cpsi.beta[]  )
+      logit(Cr[i]  ) = inprod(Cr.dm  [i,],       Cr.beta[]  )
+
+      TR[ site.year.state[i,1], site.year.state[i,2], site.year.state[i,3], 0+1] <- 1- Cpsi[i]
+      TR[ site.year.state[i,1], site.year.state[i,2], site.year.state[i,3], 1+1] <- Cpsi[i]*(1-Cr[i])
+      TR[ site.year.state[i,1], site.year.state[i,2], site.year.state[i,3], 2+1] <- Cpsi[i]*Cr[i]
+   }
+
+
+   # model initial occupancy latent state  Occ[year, site]
+   for (i in 1:nsites) {
+	  	Occ[1,i] ~ dcat(phi0[(0:2)+1, i]) 
+   }
+
+   # model subsequent occupancy latent states. 
+   for(i in 1:nsites){
+       for(j in 2:nyears){
+          Occ[j,i] ~dcat( TR[i, j-1, Occ[j-1,i], (0:2)+1])
+          #Occ[j,i]  ~dcat( c(.25, .50, .25))
+
+       }
+   }
+
+   # now for the observed data. 
+   for(i in 1:nobsocc){
+       ostate[i] ~ dcat( P[i, Occ[ostate.year[i], ostate.site[i]], 1:3])
+   }
+
+
+
+   # priors for the betas
+   for(i in 1:psi0.nbeta){
+      psi0.beta[i] ~ dnorm(0, .0001)  # mostly flat prior
+   }
+   for(i in 1:r0.nbeta){
+      r0.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+   }
+   for(i in 1:Cpsi.nbeta){
+      Cpsi.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+   }
+   for(i in 1:Cr.nbeta){
+      Cr.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+  }
+   for(i in 1:p1.nbeta){
+      p1.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+   }
+   for(i in 1:p2.nbeta){
+      p2.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+   }
+   for(i in 1:delta.nbeta){
+      delta.beta[i]   ~ dnorm(0, .0001)  # mostly flat prior
+   }
+}

@@ -1,0 +1,19 @@
+TITLE:Brook Trout
+DATAFILE:brooktrout.pao
+SITECOVFILE:
+NSITES:77
+NSURVEYS:3
+NRVY/SEASON:3
+NSITECOV:1
+NSRVYCOV:1
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:12c
+NMODELS:3
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+1 group, Constant P	  232.79	     0.00	   0.7870	   1.0000	    2	  228.79	
+2 groups, Constant P	  236.79	     4.00	   0.1065	   0.1353	    4	  228.79	
+2 groups, Constant P  -initial values	  236.79	     4.00	   0.1065	   0.1353	    4	  228.79	

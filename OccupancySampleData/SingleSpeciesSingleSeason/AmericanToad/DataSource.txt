@@ -1,0 +1,9 @@
+ 
+American Toad
+   Single Season Multi Species
+
+   This was the data used in MacKenzie et al (2002). 
+   I downloaded it from the supplement area of the paper in Ecology.
+   Refer to Excel workbook for more information.
+   Extremely sparse data.
+ 

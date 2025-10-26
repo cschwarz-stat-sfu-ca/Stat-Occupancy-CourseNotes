@@ -1,0 +1,22 @@
+TITLE:Spotted and Barred Owl Co-Occurrence
+DATAFILE:spottedandbarredowl.pao
+SITECOVFILE:
+NSITES:302
+NSURVEYS:10
+NRVY/SEASON:10
+NSITECOV:0
+NSRVYCOV:1
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:3000
+NMODELS:6
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psiA,psiB,phi=1    ,pAxN,pBxN,     rAxN ,rBxN,delta=1	 1214.50	     0.00	   0.7186	   1.0000	   10	 1194.50	
+psiA,psiB,phi    ,pAxN,pBxN,     rAxN ,rBxN,delta=1	 1216.48	     1.98	   0.2670	   0.3716	   11	 1194.48	
+psiA,psiB,phi=1    ,pAxN,pBxN,     rA,rB,delta=1	 1222.33	     7.83	   0.0143	   0.0199	    8	 1206.33	
+psiA,psiB,phi=1 ,pA,pB,     rA,rB,delta=1	 1270.95	    56.45	   0.0000	   0.0000	    6	 1258.95	
+psiA,psiB,phi=1 ,pA,pB,rA,rB,delta	 1272.85	    58.35	   0.0000	   0.0000	    7	 1258.85	
+psiA,psiB,phi,pA,pB,rA,rB,delta	 1273.98	    59.48	   0.0000	   0.0000	    8	 1257.98	

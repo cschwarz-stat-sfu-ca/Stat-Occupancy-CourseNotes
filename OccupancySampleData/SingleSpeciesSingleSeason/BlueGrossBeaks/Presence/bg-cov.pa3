@@ -1,0 +1,21 @@
+TITLE:grossbeak covariates
+DATAFILE:e:\stat-occupancy\occupancycourse-2018-02-12\coursenotes\occupancysampledata\bluegrossbeaks\bg-cov.pao
+SITECOVFILE:
+NSITES:41
+NSURVEYS:3
+NSRVY/SEASON:3
+NMETH/SRVY:1
+NSITECOV:3
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:single
+NMODELS:4
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(*), p(*)	  172.19	     0.00	   0.4006	   1.0000	    2	  168.19	
+psi(CropNotCrop),p(.)	  172.28	     0.09	   0.3829	   0.9560	    3	  166.28	
+psi(logFS.),p(.)	  173.92	     1.73	   0.1687	   0.4211	    3	  167.92	
+psi(fs)   p(.)	  176.44	     4.25	   0.0478	   0.1194	    3	  170.44	

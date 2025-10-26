@@ -1,0 +1,208 @@
+
+   Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:54    Page  001
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   This version was compiled by GCC version 8.1.0 using the options: 
+     -cpp -D__DYNAMIC__ -D IEEE -D DBLEPRECISION -fPIC -m64
+     -mmacosx-version-min=10.11.0 -mtune=core2 -O2 -fimplicit-none -fbounds-check
+     -funroll-loops -ftree-vectorize -ffpe-summary=invalid,zero,overflow,underflow
+     -fno-unsafe-math-optimizations -frounding-math -fsignaling-nans -fopenmp.
+
+   This problem will use 7 of 8 possible threads.
+
+
+  INPUT --- proc title ;
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+
+  INPUT --- proc chmatrix occasions= 10 groups= 2 etype= RDOccupEG 
+  INPUT --- Nodes= 101 icovar = 1 ICMeans  NoHist hist= 34 ;
+
+  INPUT ---    time interval 0 0 0 0 1 0 0 0 0 ;
+
+  INPUT ---     icovariates Elevation ;
+
+  INPUT ---    glabel(1)=ProxNo;
+
+  INPUT ---    glabel(2)=ProxYes;
+
+      Number of unique encounter histories read was 34.
+
+      Number of individual covariates read was 1.
+      Time interval lengths vary and/or not equal to 1.
+
+      Data type number is 30
+      Data type is Robust Design Occupancy Estimation with psi(1), gamma, epsilon.                                     
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:54    Page  002
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc estimate link=Logit NOLOOP varest=2ndPart    ;
+
+
+  INPUT --- model={ Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) };
+
+  INPUT ---    group=1 Psi    rows=1 cols=1 Square ;
+  INPUT ---        1 ;
+
+  INPUT ---    group=2 Psi    rows=1 cols=1 Square ;
+  INPUT ---        1 ;
+
+  INPUT ---    group=1 Epsilon    rows=1 cols=1 Square ;
+  INPUT ---        2 ;
+
+  INPUT ---    group=2 Epsilon    rows=1 cols=1 Square ;
+  INPUT ---        2 ;
+
+  INPUT ---    group=1 Gamma    rows=1 cols=1 Square ;
+  INPUT ---        3 ;
+
+  INPUT ---    group=2 Gamma    rows=1 cols=1 Square ;
+  INPUT ---        3 ;
+
+  INPUT ---    group=1 p  Session 1  rows=1 cols=5 Square ;
+  INPUT ---        4 4 4 4 4 ;
+
+  INPUT ---    group=1 p  Session 2  rows=1 cols=5 Square ;
+  INPUT ---        4 4 4 4 4 ;
+
+  INPUT ---    group=2 p  Session 1  rows=1 cols=5 Square ;
+  INPUT ---        4 4 4 4 4 ;
+
+  INPUT ---    group=2 p  Session 2  rows=1 cols=5 Square ;
+  INPUT ---        4 4 4 4 4 ;
+
+  INPUT ---    design matrix constraints=4 covariates=5;
+  INPUT ---        1 Elevation 0 0 0;
+  INPUT ---        0 0 1 0 0;
+  INPUT ---        0 0 0 1 0;
+  INPUT ---        0 0 0 0 1;
+  INPUT ---       blabel(1)=Psi:(Intercept);
+  INPUT ---       blabel(2)=Psi:Elevation;
+  INPUT ---       blabel(3)=Epsilon:(Intercept);
+  INPUT ---       blabel(4)=Gamma:(Intercept);
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:54    Page  003
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       blabel(5)=p:(Intercept);
+  INPUT ---       rlabel(1)=Psi gNo a0 t1;
+  INPUT ---       rlabel(2)=Epsilon gNo a0 t1;
+  INPUT ---       rlabel(3)=Gamma gNo a0 t1;
+  INPUT ---       rlabel(4)=p gNo s1 t1;
+
+ Link Function Used is LOGIT        
+
+ Variance Estimation Procedure Used is 2ndPart 
+ -2logL(saturated) = 0.0000000     
+ Effective Sample Size = 78
+
+ Number of function evaluations was 21 for 5 parameters.
+ Time for numerical optimization was 0.02 seconds.     
+ -2logL { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 315.67312     
+ Penalty { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 0.0000000     
+ Gradient { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }:
+   0.000000       0.000000       0.000000       0.000000     -0.4017658E-05
+ Maximum ABS(G) { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 0.4017658E-05 
+ S Vector { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }:
+   33.28364      10.27398      1.335546     0.5792545     0.4306793E-01
+ Time to compute number of parameters was 0.01 seconds.     
+ Ratio Threshold = 50.000000       Max Gap (4/5) = 13.449786       Next Max Gap (2/3) = 7.6927158     
+ Gap Method for Num. of Estimated Parameters { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 5          
+ Threshold { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 0.8035315E-05                 
+ Numerical Threshold Method for Num. of Estimated Parameters { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 5          
+ Number of Estimated Parameters { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 5          
+ DEVIANCE { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 315.67312                     
+ DEVIANCE Degrees of Freedom { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 34            
+ c-hat { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 9.2845037                     
+ AIC { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 325.67312                  
+ AICc { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 326.50646                    
+ BIC { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 337.45667                    
+ Pearson Chisquare { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) } = 112177.42                  
+
+
+         LOGIT Link Function Parameters of { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }
+                                                              95% Confidence Interval
+ Parameter                    Beta         Standard Error      Lower           Upper
+ -------------------------  --------------  --------------  --------------  --------------
+    1:Psi:(Intercept)        3.2246263       3.0532723      -2.7597875       9.2090402    
+    2:Psi:Elevation         -0.0036358       0.0035267      -0.0105480       0.0032765    
+    3:Epsilon:(Intercept)   -1.8757637       1.2673525      -4.3597746       0.6082473    
+    4:Gamma:(Intercept)     -1.2994710       0.9262165      -3.1148555       0.5159134    
+    5:p:(Intercept)         -0.8989659       0.2047022      -1.3001823      -0.4977494    
+
+
+         Real Function Parameters of { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }
+
+      Following estimates based on unstandardized individual covariate values:
+          Variable   Value         
+          ---------  ------------- 
+          ELEVATION   846.71877    
+                                                               95% Confidence Interval
+  Parameter                  Estimate       Standard Error      Lower           Upper
+ --------------------------  --------------  --------------  --------------  --------------
+     1:Psi gNo a0 t1          0.5364704       0.1066903       0.3329696       0.7285082                          
+     2:Epsilon gNo a0 t1      0.1328762       0.1460245       0.0126200       0.6475409                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:54    Page  004
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+     3:Gamma gNo a0 t1        0.2142541       0.1559279       0.0424986       0.6261917                          
+     4:p gNo s1 t1            0.2892631       0.0420847       0.2141343       0.3780697                          
+
+
+                      Estimates of Derived Parameters
+
+
+         Psi Estimates of { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Psi-hat         Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    0.5364704       0.1066902       0.3273577       0.7455832    
+   1     2    0.5644993       0.1050950       0.3585132       0.7704855    
+   2     1    0.5364704       0.1066902       0.3273577       0.7455832    
+   2     2    0.5644993       0.1050950       0.3585132       0.7704855    
+
+  
+   Lambda Estimates of { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Lambda-hat      Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    1.0522469       0.1991781       0.6618579       1.4426360    
+   2     1    1.0522469       0.1991781       0.6618579       1.4426360    
+
+  
+   Lambda' Estimates of { Psi(~Elevation)Epsilon(~1)Gamma(~1)p(~1) }
+                                                95% Confidence Interval
+ Grp. Occ.   Lambda'-hat     Standard Error      Lower           Upper
+ ---- ----   --------------  --------------  --------------  --------------
+   1     1    1.1199698       0.4707823       0.1972364       2.0427032    
+   2     1    1.1199698       0.4707823       0.1972364       2.0427032    
+
+   CPU Time for the last procedure was 0.03 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    14-Feb-2020 12:05:54    Page  005
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc stop;
+
+     CPU Time in minutes for this job was 0.00
+
+     Time Start = 12:05:54.876   Time End = 12:05:54.890
+
+     Wall Clock Time in minutes for this job was 0.00
+
+
+          E X E C U T I O N   S U C C E S S F U L 

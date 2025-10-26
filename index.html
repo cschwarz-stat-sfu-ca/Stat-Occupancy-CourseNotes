@@ -1,0 +1,916 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Ecological Statistics - Occupancy Modelling</title>
+</head>
+<body>
+
+<table>
+<tr>
+  <td>
+  <b><font size=6>Occupancy<br>Modelling</font></b>
+  </td>
+  <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+  <td>
+  Presented by<br>
+  <b><font size=4>StatMathComp<br> Consulting<br>by Schwarz, Inc</font></b>
+</td>
+  <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td>
+<a href=http://www.stat.sfu.ca/~cschwarz>Carl James Schwarz</a> &nbsp;<a>
+<br> &nbsp; &nbsp; &nbsp; &nbsp; <a href=http://www.stat.sfu.ca/~cschwarz/2018-Fellow-ASA.pdf>Fellow of the American Statistical Association</a>
+<br> &nbsp; &nbsp; &nbsp; &nbsp; Accredited Professional Statistician  
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.stat.sfu.ca/~cschwarz/PStat007smaller.jpg">P.Stat. (Statistical Society of Canada)</a>,
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.stat.sfu.ca/~cschwarz/Schwarz-pstat-asa.pdf">PStat&reg; (American Statistical Association)</a>
+
+</td>
+</table>
+<hr>
+
+<h1>Occupancy Modelling</h1>
+Quck links:
+<ul>
+<li><a href="#Introduction">What is occupancy modelling?</a>
+<li><a href='#Software'>Software</a>
+<li><a href="#Courses">Courses and Course Slides</a>
+<li><a href="#SampleData">Sample data and analyses</a>
+</ul>
+
+<a href=http://people.stat.sfu.ca/~cschwarz/Stat-Occupancy/OccupancyCourse/CourseNotes.zip>
+A complete zip file of this material is available here.</a>
+
+
+
+<a name="Introduction"></a> 
+<h2>What is occupancy modelling?</h2>
+<p>The presence or absence of a species in a set of units (polygons, landscape units, territories,
+etc.) is a fundamental concept in many ecological studies (e.g., resource selection modelling,
+biodiversity, range). Visits to sampled units can result in a positive detection of a species
+or a non-detection of the species in that unit. However, a species may not always be detected
+if present which results in "false negatives". If the issue of detectablity is not accounted
+for, estimates that rely on the observed (naive) level of occupancy can be misleading.
+
+<p>Occupancy modelling is about  methods for estimating species occurrence while accounting for potential
+false negatives.
+
+<p>A nice introduction is found at:
+<a href=https://pubs.er.usgs.gov/publication/fs20053096>USGS Occupancy Models to Study Wildlife</a>
+
+<hr>
+
+<a name="Software"></a> 
+<h2>Software</h2>
+There are several software packages that can be used for occupancy modelling.
+
+<table border=1>
+<tr><th>Package</th>
+    <th>Url</th></tr>
+<tr>
+  <td>Presence <br>
+      RPresence </td> 
+  <td><a href=https://www.mbr-pwrc.usgs.gov/software/presence.html>https://www.mbr-pwrc.usgs.gov/software/presence.html</a><br>
+      Presence is a standalong Windoze program customized for the modelling of occupancy data.<br>
+     RPresence is a <i>R</i> package that has the most common functionality of <i>Presence</i> and runs on Windoze, Mac, and Linus platforms.
+  </tr>
+<tr>
+  <td>GenPresencee </td> 
+  <td><a href=https://www.mbr-pwrc.usgs.gov/software/presence.html>https://www.mbr-pwrc.usgs.gov/software/presence.html</a><br>
+      Used for planning occupancy studies.<br>
+      When you install Presence, GenPresence is automatically installed in the same directory as <i>Presence</i>.
+  </td>
+  </tr>
+
+<tr>
+  <td>MARK <br>
+      RMark </td> 
+  <td><a href= http://www.phidot.org/software/mark/downloads/>http://www.phidot.org/software/mark/downloads/</a><br>
+      <i>MARK</i> is a standalong Windoze program for capture-recapture, occupancy, and other studies.</br>
+      <i>RMark</i> is an <i>R</i> packages available from CRAN that calls <i>MARK</i> and collects the output for further processing by <i>R</i>.<br>
+      Because <i>RMark</i> calls <i>MARK</i> directly, it only runs under Windoze.
+
+  <p>It is possible to <a href=http://people.stat.sfu.ca/~cschwarz/CourseNotes/HowGetSoftware.html#RMarkMac>install part of <i>MARK</i> on a Macintosh to run <i>RMark</i> natively without a virtualization
+     engine.</a>
+  </tr>
+
+<tr>
+  <td>unmarked </td> 
+  <td>An <i>R</i> package available from CRAN that has a limited set of occupancy models.<br>
+      Because it is writting using S4, the documentation is extremely hard to follow.
+  </td>
+  </tr>
+
+<tr>
+  <td>JAGS </td> 
+  <td>Follow istructions at <a href=http://www.stat.sfu.ca/~cschwarz/CourseNotes/HowGetSoftware.html>
+                                    http://www.stat.sfu.ca/~cschwarz/CourseNotes/HowGetSoftware.html</a><br>
+      A program to run Bayesian models written in BUGS. Commonly called from <i>R</i> to handle input/output.
+  </td>
+  </tr>
+
+<tr>
+  <td>R <br>Rstudio</td>
+  <td>Follow istructions at <a href=http://www.stat.sfu.ca/~cschwarz/CourseNotes/HowGetSoftware.html>
+                                    http://www.stat.sfu.ca/~cschwarz/CourseNotes/HowGetSoftware.html</a><br>
+      <i>RPresence</i>, <i>RMark</i>, <i>unmarked</i>, and <i>JAGS</i> use <i>R</i> extensively.
+  </td>
+  </tr>
+
+
+</table>
+
+<hr>
+<a name="Courses"></a> 
+<h2>Courses</h2>
+I offer a three day course on an Introduction of Occupancy Modelling covering the following topics.
+It is often offered through the Columbia Mountain Institute of Applied Ecology (<a href=http://www.cmiae.org>http://www.cmiae.org</a>).
+A sample offering is found at <a href=http://cmiae.org/event/occupancy-modelling-course/>http://cmiae.org/event/occupancy-modelling-course/</a>.
+
+<p>I can also do this or other courses onsite at your organization. Please contact me (<a href='mailto:cschwarz.stat.sfu.ca at gmail.com'>Carl Schwarz</a>) for information.
+
+<p><a href=Slides>Slides  from the course</a> are available in <a href=Slides>this directory</a>.
+
+<p>A typical course outline
+<ol>
+<li>Introduction
+  <ul>
+   <li> differences/similarities of occupancy and capture-recapture modelling
+   <li> fole of detectability
+   <li> basic statistical review
+   <li> concepts and notations
+   <li> binomial data, odds ratios
+   <li> basic likelihood
+   <li> model selection and multi-model inference
+  </ul>
+
+<li>Single-season occupancy models
+  <ul>
+   <li> basic sampling protocol
+   <li> PRESENCE/MARK/RPresence/RMark software to fitting single-season models
+   <li> model assumptions
+   <li> dealing with missing data
+   <li> dealing with heterogeneity
+   <li> more advanced features of PRESENCE/MARK/RPresence/RMark - design matrices/covariates
+   <li> planning studies; GENPRES software
+  </ul>
+
+<li>Multiple-season occupancy models
+  <ul>
+   <li> sampling protocol
+   <li> dynamics of population across seasons
+   <li> using PRESENCE/MARK/RPresence/RMark
+   <li> alternative parameterizations
+   <li> characterizing occupancy dynamics
+   <li> modelling spatial correlations in occupancy dynamics
+   <li> dealing with missing data
+   <li> dealing with covariates
+   <li> study design
+  </ul>
+
+<li>Species co-occurrence models
+  <ul>
+   <li> sharing information among species
+   <li> species richness or biodiversity
+   <li> single season models/ multi season models
+  </ul>
+                                                                                                                                               
+<li>Extensions
+  <ul>
+   <li> modelling spatial correlations in occupancy dynamics
+   <li> incorporation of count data
+   <li> incorporation of marked animals
+   <li> incorporation of telemetry data
+  </ul>
+
+</ol>
+
+Additonal course covering more advance topics in occupancy modelling (e.g. bayesian methods, spatial methods, multi-method, multi-scale) can
+also be arranged. Please contact me for details.
+
+
+
+
+
+<hr>
+<a name="SampleData"></a> 
+<h2>Sample data, code, and analyses</h2>
+<a href=DataSources.html>An alphabetical list of all the data is available.</a>
+
+<table border=1>
+
+<tr>
+   <th>Example</th>
+   <th>Source/Data</th>
+   <th>Notes</th>
+   <th>Presence/RPresence</th>
+   <th>MARK/RMark</th>
+   <th>Unmarked</th>
+   <th>JAGS</th>
+</tr>
+
+<tr><td colspan=3><b><big>Helper files (additional functionality)</big></b></td>
+    <td><a href=OccupancySampleData/AdditionalFunctions/RPresence.additional.functions.R>RPresence</a><br>
+    Adding new derived parameters.<br>
+    Model averaging derived parameters.
+'   </td>
+    <td><a href=OccupancySampleData/AdditionalFunctions/RMark.additional.functions.R>RMark</a><br>
+    Adding new derived parameters.<br>
+    Model averaging derived parameters.<br>
+    Stacking multi-season data to fit a random occupancy model<br>
+       &nbsp;&nbsp;&nbsp; (gamma = 1- epsilon) using a single-season model.
+    </td>
+    <td></td>
+    <td></td>
+    </tr>
+
+<tr><td colspan=5><b><big>Single Species - Single Season</big></b></td> </tr>
+<tr>
+   <td><b>Salamander</b><br>
+       Psi - no covariates<br>
+       p   - visit level covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/salamander.xls>salamander.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/RPresence>RPresence files</a><br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/RMark>RMark files</a>
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/unmarked>unmarked files</a> <br>
+      </td>
+  <td> <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander/JAGS>JAGS files</a>
+      </td>
+</tr>
+
+<tr>
+   <td><b>Salamander - missing values</b><br>
+       Psi - no covariates<br>
+       p   - visit level covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/salamander.xls>salamander.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/RMark>RMark files</a>
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/unmarked>unmarked files</a>
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-missing/JAGS>JAGS files</a>
+      </td>
+</tr>
+
+<tr>
+   <td><b>Salamander - goodness of fit</b><br>
+       Psi - no covariates<br>
+       p   - visit level covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/salamander.xls>salamander.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!-- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/RPresence>RPresence files</a> -->
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/MARK>MARK files</a><br><br>
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/unmarked>unmarked files</a>
+  <td> <!-- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Salamander-GOF/JAGS>JAGS files</a> -->
+      </td>
+</tr>
+
+
+
+<tr>
+   <td><b><a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/Mahoenui-giant-weta.jpg>Weta</a></b><br>
+       Psi - categorical covariates<br>
+       p   - visit level and site-visit  covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/weta.xls>weta.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/unmarked>unmarked files</a>
+      </td>
+  <td><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Weta/JAGS/>JAGS files</a>
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Blue Gross Beaks </b><br>
+       Psi - categorical and continuous  covariates<br>
+       p   - site-visit  covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/blgr.csv>blgr.csv</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/RPresence>Rpresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/RMark>RMark files</a> 
+      </td>
+  <td><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/unmarked>unmarked files</a>
+      </td>
+  <td><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BlueGrossBeaks/JAGS>JAGS files</a>
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>American Toad</b><br>
+       Psi - categorical and continuous  covariates<br>
+       p   - site-visit  covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/AmericanToad.xls>AmericanToad.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/unmarked>unmarked files</a> --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/AmericanToad/JAGS>JAGS files</a>      --->
+      </td>
+</tr>
+
+
+
+<tr>
+   <td><b>Brook Trout</b><br>
+       Psi - continuous  covariates<br>
+       p   - site-visit  covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/BrookTrout.xls>BrookTrout.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/BrookTrout/unmarked>unmarked files</a>  --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Brooktrout/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>SSSS-sample</b><br>
+       Psi - categorical  covariates<br>
+       p   - no  covariates
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/MARK/Occupancy_data.inp>SSSS-sample.inp</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/RPresence>Rpresence files</a>   --->
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/MARK>MARK files</a><br><br>
+       <!--- <br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/RMark>RMark files</a> -->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/unmarked/unmarked files</a> --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/SSSS-sample/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Bull Frogs</b><br>
+       Psi - no covariates<br>
+       p   - no  covariates<br>
+       Mixture model; Royle-Nichols Poisson Abundance model
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/MARK/bullfrog.inp>bullfrog.inp</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/Presence>Presence files</a><br><br> 
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/RPresence>RPresence files</a> --->
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/unmarked/>unmarked files</a> --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/BullFrogs/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+
+<tr>
+   <td><b>Pronghorn Antelope</b><br>
+       Psi - continuous and categorical covariates<br>
+       p   - no  covariates<br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/pronghorn.csv>pronghorn.csv</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/Presence>Presence files</a><br><br> 
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/RPresence>RPresence files</a> 
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/unmarked/>unmarked files</a> --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/Pronghorn/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+ 
+
+<tr>
+   <td><b>Yellow Bellied Toad</b><br>
+       Psi - no covariates<br>
+       p   - continuous site-visit covariates<br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/YellowBelliedToad.xlsx>YellowBelliedToad.xlsx</a><br>
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/RPresence>RPresence files</a> 
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/RMark>RMark files</a>
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/unmarked/>unmarked files</a> --->
+      </td>
+  <td><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesSingleSeason/YellowBelliedToad/JAGS>JAGS files</a> --->
+      </td>
+
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<tr><td colspan=5>&nbsp;</td></tr>
+<tr><td colspan=5><b><big>Single Species - Multi  Season</big></b></td> </tr>
+
+<tr>
+   <td><b><a href=OccupancySampleData/SingleSpeciesSingleSeason/NSO/NSO.pdf>Northern Spotted Owl</a></b><br>
+       Psi - no covariates<br>
+       p   - no  covariates<br>
+       gamma/epsilon - no covariates<br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/NSO.csv>NSO.csv</a><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/RMark>RMark files</a>
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/unmarked>unmarked files</a>
+      </td>
+  <td> <a href=OccupancySampleData/SingleSpeciesMultiSeason/NSO/JAGS>JAGS files</a>
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Grand Skinks</b><br>
+       Psi - categorical covariates
+       p   - no  covariates<br>
+       gamma/epsilon - categorical covariate<br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/GrandSkinks.xls>GrandSkinks.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/MARK>MARK files</a><br><br> -->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/GrandSkinks/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Salamander Multi-Season</b><br>
+       Psi - categorical and continuous covariates
+       p   - no  covariates<br>
+       gamma/epsilon - categorical and continuous  covariate<br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/SalamanderMultiSeason.xls>SalamanderMultiSeason.xls</a><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/SalamanderMultiSeason/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Redbreasted Sunfish </b><br>
+       Psi - categorical and continuous covariates<br>
+       p   - no  covariates<br>
+       gamma/epsilon - continuous  covariate<br>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/SunFishFlintRiver.xls>SunFishFlintRiver.xls</a><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/RPresence>RPresence files</a> 
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/SunFishFlintRiver/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>House finches </b><br>
+       Psi - categorical and continuous covariates<br>
+       p   - no  covariates<br>
+       gamma/epsilon - continuous  covariate<br>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/HouseFinch.xls>HouseFinch.xls</a><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/Presence>Presence files</a><br><br>
+       <!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/RPresence>RPresence files</a>  --->
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/MARK>MARK files</a><br><br> --->
+       <!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/RMark>RMark files</a> --->
+      </td>
+  <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/HouseFinch/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Butterflies</b><br>
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/Butterfly.csv>Butterfly.csv</a><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/RMark>RMark files</a> 
+      </td>
+  <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/unmarked>unmarked files</a>
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/Butterfly/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Nightingales</b><br>
+       No covariates.
+       </td>
+   <td><a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/nightingales.csv>nightingales.csv</a><br>
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/SingleSpeciesMultiSeason/Nightingales/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Rabbits and cats </b><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_et_al-2018-Ecology_and_Evolution.pdf>Cove et al (2018)</a>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-original.csv>Original Data</a><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-updated.csv>Updated Data</a><br>
+       You may need both sets of data<br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/DataSource.txt>Data source</a><br>
+       </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/MARK>MARK files</a><br><br> 
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/RMark>RMark files</a>
+      </td>
+  <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/unmarked>unmarked files</a>
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/SingleSpeciesMultiSeason/JAGS>JAGS files</a> --->
+      </td>
+
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<tr><td colspan=5>&nbsp;</td></tr>
+<tr><td colspan=5><b><big>Multi Species - Single  Season</big></b></td> </tr>
+
+<tr>
+   <td><b>Co-occurence of two salamanders</b>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/Salamander2.xls>Salamander2.xls</a><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/RPresence>RPresence files</a>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesSingleSeason/Salamander2/JAGS>JAGS files</a>  --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Spotted and Barred Owls</b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/SpottedAndBarredOwls.xls>SpottedAndBarredOwls.xls</a><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/RPresence>RPresence files </a> 
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/MARK>MARK files</a><br><br> -->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesSingleSeason/SpottedAndBarredOwls/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Co-occurence of two species of Trout</b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/Trout2.xlsx>Trout2.xlsx</a><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesSingleSeason/Trout2/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Co-occurence of two species of small carnivores<br>Coyotes, bobcats, etc</b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/Data>Data Files</a><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/Presence>Presence files</a><br><br> --->
+       <!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/RPresence>RPresence files</a> --->
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesSingleSeason/Coyotes/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Co-occurence of two species of bears<br>Black bears vs. grizzly bears</b><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/Paper>Ladle et al. (2018)</a>
+       </td>
+   <td><a href="OccupancySampleData/MultiSpeciesSingleSeason/Bears/Raw data">Data Files</a><br>
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/RPresence>RPresence files</a> 
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesSingleSeason/Bears/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Co-occurence of Rabbits and cats </b><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_et_al-2018-Ecology_and_Evolution.pdf>Cove et al (2018)</a>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-original.csv>Original Data</a><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-updated.csv>Updated Data</a><br>
+       You may need both sets of data<br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/DataSource.txt>Data source</a><br>
+       </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/Presence>Presence files</a><br><br> --->
+       <!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/RPresence>RPresence files</a> --->
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/MARK>MARK files</a><br><br>  --->
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesSingleSeason/JAGS>JAGS files</a> --->
+      </td>
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<tr><td colspan=5>&nbsp;</td></tr>
+<tr><td colspan=5><b><big>Multi Species - Multi  Season</big></b></td> </tr>
+
+<tr>
+   <td><b>Co-occurence of three small mammals<br>
+         Coyotes, raccoons, possums</b>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/Fidino_MEE/data/>Data from paper in long format</a><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/Presence>Presence files</a><br><br> --->
+       <!---<a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/RPresence>RPresence files</a> --->
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/MARK>MARK files</a><br><br> --->
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesMultiSeason/PossumCoyoteRaccoon/JAGS>JAGS files</a>  --->
+      </td>
+</tr>
+
+<tr>
+   <td><b>Rabbits and cats </b><br>
+        Partial analysis.<br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_et_al-2018-Ecology_and_Evolution.pdf>Cove et al (2018)</a>
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-original.csv>Original Data</a><br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/Cove_etal_Ecology_Evolution_2018_data-updated.csv>Updated Data</a><br>
+       You may need both sets of data<br>
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/DataSource.txt>Data source and code book</a><br>
+       </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/Presence>Presence files</a><br><br> --->
+       <!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/RPresence>RPresence files</a> --->
+       </td>
+   <td><a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/MARK>MARK files</a><br><br> 
+       <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiSpeciesMultiSeason/CoveRabbitsCats/MultiSpeciesMultiSeason/JAGS>JAGS files</a> --->
+      </td>
+
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<tr><td colspan=5>&nbsp;</td></tr>
+<tr><td colspan=5><b><big>Multi State - Single  Season</big></b></td> </tr>
+
+<tr>
+   <td><b>California Spotted Owl</b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/CalSpottedOwl.xls>CalSpottedOwl.xls</a><br> 
+       <a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/RPresence>RPresence files </a>
+       </td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiStateSingleSeason/CalSpottedOwl/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+<tr>
+   <td><b>Coose Bass </b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/CoosaBass.xls>CoosaBass.xls</a><br>
+       <a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/Presence>Presence files</a><br><br>
+       <a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/RPresence>RPresence files</a> 
+       </td>
+   <td><a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/MARK>MARK files</a><br><br>
+       <a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/RMark>RMark files</a> 
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/unmarked>unmarked files</a> --->
+      </td>
+  <td><!---  <a href=OccupancySampleData/MultiStateSingleSeason/CoosaBass/JAGS>JAGS files</a> --->
+      </td>
+</tr>
+
+
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<tr><td colspan=5>&nbsp;</td></tr>
+<tr><td colspan=5><b><big>Multi State - Multi  Season</big></b></td> </tr>
+
+<tr>
+   <td><b>Hawks</b><br>
+       </td>
+   <td><a href=OccupancySampleData/MultiStateMultiSeason/Hawk/Hawk.csv>Hawk.csv</a><br> 
+       <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/DataSource.txt>Data source</a> </td>
+   <td></td>
+   <td><!--- <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/Presence>Presence files</a><br><br> --->
+       <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/RPresence>RPresence files</a>
+       </td>
+   <td><!--- <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/MARK>MARK files</a><br><br>  --->
+       <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/RMark>RMark files</a>
+      </td>
+  <td><!--- <a href=OccupancySampleData/MultiStateMultiSeason/Hawk/unmarked>unmarked files</a> --->
+      </td>
+  <td><a href=OccupancySampleData/MultiStateMultiSeason/Hawk/JAGS>JAGS files</a>
+      </td>
+</tr>
+
+
+
+
+</table>
+
+<hr><P>
+<address>
+</table>
+
+<hr><P>
+<address>
+[
+<A href="http://www.stat.sfu.ca/">SFU Statistics &amp; Actuarial Science Home</A>
+|
+<A href="http://www.sfu.ca/">SFU Home</A>]
+
+<br>
+<a href="mailto:cschwarz@stat.sfu.ca">Email comments or suggestions to cschwarz@stat.sfu.ca</a>
+<br><small>Last updated 2018-12-26</small>
+</body>
+</html> 
+

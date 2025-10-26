@@ -1,0 +1,196 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Wed Oct 26 19:50:20 2011,       Version 4.0111018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=\\vboxsvr\cschwarz-desktop\occupancycourse\occupancysampledata\salamandermultiseason\salamander-multiseason.pao
+==>l=pres_psi_gamma()_eps()_p(season).out
+==>name=psi,gamma(),eps(),p(season)
+==>model=200
+==>j=\\vboxsvr\cschwarz-desktop\occupancycourse\occupancysampledata\salamandermultiseason\salamander-multiseason_project\salamander-multiseason.dm
+==>lmt=200
+model=200 N,T-->39,10
+modtype-->2 
+
+********* Input Data summary *******
+Number of sites                = 39
+Number of sampling occasions   = 10
+Number of missing observations = 0
+Data checksum = 42044
+
+Naive occupancy estimate       = 0.5897
+
+NSiteCovs-->2
+site_covname[0]=Elev(m)
+site_covname[1]=StreamProximity
+NSampCovs-->0
+Primary periods=2 Secondary periods: 5 5
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Salamander Multi-Season
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+modtype=2 N=39 T=10 Groups=1 bootstraps=0
+
+-->2-5
+Matrix 1: rows=2, cols=2
+            -,a1,
+psi1          1
+========================
+
+Matrix 2: rows=2, cols=2
+            -,b1,
+gam1          1
+========================
+
+Matrix 3: rows=2, cols=2
+            -,c1,
+eps1          1
+========================
+
+Matrix 4: rows=11, cols=3
+            -,d1,d2,
+P[1-1]        1 0
+P[1-2]        1 0
+P[1-3]        1 0
+P[1-4]        1 0
+P[1-5]        1 0
+P[2-1]        0 1
+P[2-2]        0 1
+P[2-3]        0 1
+P[2-4]        0 1
+P[2-5]        0 1
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+
+Multi-season model
+------------------
+
+2 Primary periods
+  Secondary periods: 5 5
+
+Model(1):psi,gamma(),eps(),p(season)
+
+
+
+Open Population Model:
+
+Number of primary sampling periods = 2
+Number of parameters               = 5
+Optimization completion code:130
+
+Model has been fit using the logistic link.
+
+
+Number of parameters           = 5
+Number of function calls           = 198
+-2log(likelihood)              = 316.1857
+AIC                            = 326.1857
+
+varcov: nsig=6 eps=1.000000e-002
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psi1                             :   0.032951    0.399847
+B1   gam1                             :  -0.998295    0.793315
+C1   eps1                             :  -2.306607    2.126675
+D1   P[1-1]                           :  -0.740540    0.276346
+D2   P[2-1]                           :  -1.052585    0.300864
+
+Variance-Covariance Matrix of Untransformed estimates (Beta's):
+              A1         B1         C1         D1         D2  
+     A1    0.159878  -0.094718  -0.000001  -0.041603  -0.000000
+     B1   -0.094718   0.629348  -0.006280   0.068787  -0.046202
+     C1   -0.000001  -0.006280   4.522745  -0.000000   0.372789
+     D1   -0.041603   0.068787  -0.000000   0.076367   0.000000
+     D2   -0.000000  -0.046202   0.372789   0.000000   0.090519
+------------------------------
+
+   Individual Site estimates of <psi1> 
+                Site               estimate  Std.err   95% conf. interval
+psi1            1 site 1          :  0.5082   0.0999     0.3207 - 0.6935 
+
+   Individual Site estimates of <gam1> 
+                Site               estimate  Std.err   95% conf. interval
+gam1            1 site 1          :  0.2693   0.1561     0.0722 - 0.6357 
+
+   Individual Site estimates of <eps1> 
+                Site               estimate  Std.err   95% conf. interval
+eps1            1 site 1          :  0.0906   0.1752     0.0015 - 0.8655 
+
+   Individual Site estimates of <P[1-1]> 
+                Site               estimate  Std.err   95% conf. interval
+P[1-1]          1 site 1          :  0.3229   0.0604     0.2172 - 0.4504 
+P[1-2]          1 site 1          :  0.3229   0.0604     0.2172 - 0.4504 
+P[1-3]          1 site 1          :  0.3229   0.0604     0.2172 - 0.4504 
+P[1-4]          1 site 1          :  0.3229   0.0604     0.2172 - 0.4504 
+P[1-5]          1 site 1          :  0.3229   0.0604     0.2172 - 0.4504 
+P[2-1]          1 site 1          :  0.2587   0.0577     0.1622 - 0.3863 
+P[2-2]          1 site 1          :  0.2587   0.0577     0.1622 - 0.3863 
+P[2-3]          1 site 1          :  0.2587   0.0577     0.1622 - 0.3863 
+P[2-4]          1 site 1          :  0.2587   0.0577     0.1622 - 0.3863 
+P[2-5]          1 site 1          :  0.2587   0.0577     0.1622 - 0.3863 
+
+Real parameters: (computed using covariates from 1st site and 1st survey)
+
+Real parameter :              estimate   SE(estimate)
+     1 psi1                     0.5082      0.0999
+     2 gam1                     0.2693      0.1561
+     3 eps1                     0.0906      0.1752
+     4 P[1-1]                   0.3229      0.0604
+     5 P[1-2]                   0.3229      0.0604
+     6 P[1-3]                   0.3229      0.0604
+     7 P[1-4]                   0.3229      0.0604
+     8 P[1-5]                   0.3229      0.0604
+     9 P[2-1]                   0.2587      0.0577
+    10 P[2-2]                   0.2587      0.0577
+    11 P[2-3]                   0.2587      0.0577
+    12 P[2-4]                   0.2587      0.0577
+    13 P[2-5]                   0.2587      0.0577
+Variance-covariance matrix of real parameters:
+   0.009987  -0.004658   0.000000  -0.002273  -0.002273  -0.002273  -0.002273  -0.002273
+   0.000000   0.000000   0.000000   0.000000   0.000000
+  -0.004658   0.024367  -0.000102   0.002959   0.002959   0.002959   0.002959   0.002959
+  -0.001744  -0.001744  -0.001744  -0.001744  -0.001744
+   0.000000  -0.000102   0.030688  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.005889   0.005889   0.005889   0.005889   0.005889
+  -0.002273   0.002959  -0.000000   0.003650   0.003650   0.003650   0.003650   0.003650
+  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+  -0.002273   0.002959  -0.000000   0.003650   0.003650   0.003650   0.003650   0.003650
+  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+  -0.002273   0.002959  -0.000000   0.003650   0.003650   0.003650   0.003650   0.003650
+  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+  -0.002273   0.002959  -0.000000   0.003650   0.003650   0.003650   0.003650   0.003650
+  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+  -0.002273   0.002959  -0.000000   0.003650   0.003650   0.003650   0.003650   0.003650
+  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.000000  -0.001744   0.005889  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.003330   0.003330   0.003330   0.003330   0.003330
+   0.000000  -0.001744   0.005889  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.003330   0.003330   0.003330   0.003330   0.003330
+   0.000000  -0.001744   0.005889  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.003330   0.003330   0.003330   0.003330   0.003330
+   0.000000  -0.001744   0.005889  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.003330   0.003330   0.003330   0.003330   0.003330
+   0.000000  -0.001744   0.005889  -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   0.003330   0.003330   0.003330   0.003330   0.003330
+
+================================================================================
+
+ DERIVED parameters - psi2,psi3,psi4,...
+
+        Site                        psi(t)  Std.err     95% conf. interval
+     1   site 1      psi( 2):       0.5946  0.1226     0.3543 - 0.8349 
+
+
+ DERIVED parameters - lam2,lam3,lam4,...
+
+        Site                        lam(t)  Std.err     95% conf. interval
+     1   site 1      lam( 2):       1.1700  0.2719     0.6370 - 1.7029
+
+CPU time: 0.0 seconds
+

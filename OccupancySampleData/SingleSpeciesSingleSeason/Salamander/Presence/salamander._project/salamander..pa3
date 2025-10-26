@@ -1,0 +1,20 @@
+TITLE:Salamander Example
+DATAFILE:salamander..pao
+SITECOVFILE:
+NSITES:39
+NSURVEYS:5
+NSRVY/SEASON:5
+NMETH/SRVY:1
+NSITECOV:0
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:single
+NMODELS:3
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi((),p(1=2, 3=4=5)	  162.82	     0.00	   0.7595	   1.0000	    3	  156.82	
+1 group, Constant P - II	  165.76	     2.94	   0.1746	   0.2299	    2	  161.76	
+1 group, Survey-specific P	  167.71	     4.89	   0.0659	   0.0867	    6	  155.71	

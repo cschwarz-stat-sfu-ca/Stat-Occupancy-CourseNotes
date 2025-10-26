@@ -1,0 +1,23 @@
+TITLE:Salamander Co-occurence
+DATAFILE:c:\documents and settings\cschwarz\desktop\salamandercooccurence\salamandercooccurence_project\salamander-cooccurence.inp
+SITECOVFILE:
+NSITES:176
+NSURVEYS:5
+NRVY/SEASON:5
+NSITECOV:2
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:3000
+NMODELS:7
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psiA(E),psiB(E),phi(),pA,pB,rA,rB,delta	  720.43	     0.00	   1.0000	   1.0000	   10	  700.43	
+psiA,psiB,phi,pA,pB,rA=rB,delta=1	  749.25	    28.82	   0.0000	   0.0000	    6	  737.25	
+psiA,psiB,phi,pA,pB,rA=rB,delta	  750.33	    29.90	   0.0000	   0.0000	    7	  736.33	
+psiA,psiB,phi,pA,pB,rA,rB,delta=1	  750.62	    30.19	   0.0000	   0.0000	    7	  736.62	
+psiA,psiB,phi,pA,pB,rA,rB,delta	  751.87	    31.44	   0.0000	   0.0000	    8	  735.87	
+psiA,psiB,phi=1,,pA,pB,rA,rB,delta	  760.33	    39.90	   0.0000	   0.0000	    7	  746.33	
+psiA,psiB,phi,pA=pB,rA,rB,delta	  791.65	    71.22	   0.0000	   0.0000	    7	  777.65	

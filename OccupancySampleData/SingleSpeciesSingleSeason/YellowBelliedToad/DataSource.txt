@@ -1,0 +1,8 @@
+ 
+Yellow Bellied Toad
+   Single Season Multi Species
+
+   Data set (yellow_bellied_toad) in the R package blmeco.
+
+   Two visits to each site (history) on julian date as given.
+ 

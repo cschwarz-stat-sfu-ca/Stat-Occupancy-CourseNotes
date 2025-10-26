@@ -1,0 +1,23 @@
+TITLE:grossbeak
+DATAFILE:grossbeak-new.pao
+SITECOVFILE:
+NSITES:41
+NSURVEYS:3
+NSRVY/SEASON:3
+NMETH/SRVY:1
+NSITECOV:0
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:single
+NMODELS:6
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(*),  p(.1=2=5, 3=4)	  163.12	     0.00	   0.4923	   1.0000	    3	  157.12	
+psi(*),p(1=2, 3=4, 5)	  163.98	     0.86	   0.3202	   0.6505	    4	  155.98	
+psi(*), p(*)	  165.76	     2.64	   0.1315	   0.2671	    2	  161.76	
+psi(*)  p(visit)	  167.71	     4.59	   0.0496	   0.1008	    6	  155.71	
+psi(*),  p(*)	  172.19	     9.07	   0.0053	   0.0107	    2	  168.19	
+psi(*)   p(t)	  175.29	    12.17	   0.0011	   0.0023	    4	  167.29	

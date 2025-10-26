@@ -1,0 +1,6 @@
+Redbreast sunfish on Lower Flint River basin in SW Georgia. 
+   Single Species Multi Season
+   Data set used in http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html
+
+Fishes were collected seasonally (spring and summer) from 2001-2004 in26 streams using a quadrat design, i.e., fishes were collected fromthree 50 - 150 m long segments in each stream via electro fishing.
+Are p(t) models within a season sensible? (Why?)Investigate effect of stream flow on local extinction and colonization 

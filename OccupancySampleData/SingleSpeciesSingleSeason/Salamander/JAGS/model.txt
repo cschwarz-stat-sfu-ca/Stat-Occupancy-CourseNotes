@@ -1,0 +1,44 @@
+
+############################################################
+
+model {
+   # estimate psi for each site from the design matrix
+   for(i in 1:Nsites){
+      logit(psi[i]) = inprod( dmatrix.psi[i, 1:Nbeta.psi], beta.psi[1:Nbeta.psi])
+   }
+
+   # estimate p for each observation
+   for(i in 1:Nsites.visits){
+      logit(p[i]) = inprod( dmatrix.p[i, 1:Nbeta.p], beta.p[1:Nbeta.p])
+    }
+
+
+   # set up the state model, i.e. is the site actually occupied or not
+   for(i in 1:Nsites){
+      z[i] ~  dbern(psi[i])
+   }
+
+   # the observation model.
+   for(j in 1:Nsites.visits){
+      p.z[j] <- z[Site[j]]*p[j]
+      History[j] ~ dbern(p.z[j])
+   }
+
+   # priors on the betas
+   beta.psi[1] ~ dnorm(0, .25)  # intercept we want basically flat on regular scale
+   for(i in 2:Nbeta.psi){
+      beta.psi[i] ~ dnorm(0, .0001)
+   }
+
+   beta.p[1] ~ dnorm(0, .25)
+   for(i in 2:Nbeta.p){
+      beta.p[i] ~ dnorm(0, .0001)
+   }
+
+   # derived variables
+   # number of occupied sites
+   occ.sites <- sum(z[1:Nsites])
+ 
+   # belief that psi is above some value
+   prob.psi.greater.50 <- ifelse( psi[1] > 0.5, 1, 0)
+}

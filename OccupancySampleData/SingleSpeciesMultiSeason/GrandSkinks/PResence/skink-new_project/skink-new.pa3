@@ -1,0 +1,22 @@
+TITLE:Grand skink
+DATAFILE:skink-new.pao
+SITECOVFILE:
+NSITES:352
+NSURVEYS:15
+NSRVY/SEASON:3
+NMETH/SRVY:1
+NSITECOV:1
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:multi
+NMODELS:5
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(pature),gamma(pasture),eps(pasture),p()	 1745.00	     0.00	   0.9216	   1.0000	    7	 1731.00	
+psi(pasture),gamma(pasture*time),eps(pasture*time),p()	 1751.12	     6.12	   0.0432	   0.0469	   19	 1713.12	
+psi(pasture) ,gamma(),eps(),p()	 1751.53	     6.53	   0.0352	   0.0382	    5	 1741.53	
+psi,gamma(year),eps(year),p(year)	 1773.88	    28.88	   0.0000	   0.0000	   14	 1745.88	
+psi,gamma(),eps(),p()	 1775.02	    30.02	   0.0000	   0.0000	    4	 1767.02	

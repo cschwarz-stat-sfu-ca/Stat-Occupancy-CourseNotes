@@ -1,0 +1,6 @@
+ 
+Brook Trout
+   Single season single species occupancy
+
+   This is the sample dataset that ships with MARK.
+   ource unknown. 

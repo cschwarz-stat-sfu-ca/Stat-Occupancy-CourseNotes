@@ -1,0 +1,36 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Thu Feb 15 13:18:04 2018,       Version 2.12.9.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>C:\Progra~2\Presence\presence.exe
+==>i=skink-new.pao
+==>l=pres_ps((pasture)i_gamma()_eps()_p().out
+==>name=ps((pasture)i,gamma(),eps(),p()
+==>j=skink-new.dm
+varcov: nsig=6 eps=1.000000e-002
+no model name N,T-->352,15
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 352
+Number of sampling occasions   = 15
+Number of states               = 2
+Number of missing observations = 2969
+Data checksum = 59478
+
+NSiteCovs-->1
+site_covname[0]=Pasture
+NSampCovs-->0
+Primary periods=5 Secondary periods: 3 3 3 3 3
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Grand skink
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=352 T=15 Groups=1 bootstraps=0
+
+-->5-3
+Matrix 1: rows=2, cols=3
+            -,a1,a2,
+psi1          1ERROR: covar name not found (pasture)

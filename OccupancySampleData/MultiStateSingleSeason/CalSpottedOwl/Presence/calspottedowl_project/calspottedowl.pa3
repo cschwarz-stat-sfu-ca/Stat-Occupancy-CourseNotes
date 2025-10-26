@@ -1,0 +1,22 @@
+TITLE:California Spotted Owl - Multistate
+DATAFILE:calspottedowl.pao
+SITECOVFILE:
+NSITES:54
+NSURVEYS:5
+NRVY/SEASON:5
+NSITECOV:0
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:5
+NMODELS:6
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi,R,   p(*,t)   delta(12,345)	  279.36	     0.00	   0.9890	   1.0000	    9	  261.36	
+psi,R,   p(*,*)   delta(12,345)	  288.35	     8.99	   0.0110	   0.0112	    5	  278.35	
+psi,R,   p(*,t)   delta(*)	  326.38	    47.02	   0.0000	   0.0000	    8	  310.38	
+psi,R,   p(s,t)   delta(*)	  332.27	    52.91	   0.0000	   0.0000	   13	  306.27	
+psi,R,   p(*,*)   delta(*)	  335.38	    56.02	   0.0000	   0.0000	    4	  327.38	
+psi,R,   p(s,*)   delta(*)	  337.36	    58.00	   0.0000	   0.0000	    5	  327.36	

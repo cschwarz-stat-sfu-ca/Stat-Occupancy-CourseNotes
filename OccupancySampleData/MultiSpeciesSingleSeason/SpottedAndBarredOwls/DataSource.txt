@@ -1,0 +1,14 @@
+
+Spotted and Barred Owl CoOccurrence
+   Multi season single season
+
+   Ships with PRESENCE. Appears to be based on:
+       Modelling co-occurrence of northern spotted and barred owls:
+       Accounting for detection probability differences^M
+       Larissa L. Bailey, Janice A. Reid, Eric D. Forsman, James D. Nichols^M
+       Biological Conservation 142 (2009) 2983Ð2989.^M
+
+   Co-occurrence of two species of owls.
+
+   I only used the first 10 surveys in the season.
+   

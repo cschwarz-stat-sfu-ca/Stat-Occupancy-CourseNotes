@@ -1,0 +1,16 @@
+
+Flint River Fish
+   Multi Species Single Season
+
+   Species capture recapture data from
+   the Flint River at Montezuma 2 replicates 
+   per habitat habitats sampled (in order)
+   edge pool run                           
+
+   Source: http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html */
+
+   This is NOT a multi-species occupancy dataset! other than the fact that two species
+   of fish were measured at each sample point.
+
+   The mussel example at the same site may be more interesting, but I've got enough
+   examples now.

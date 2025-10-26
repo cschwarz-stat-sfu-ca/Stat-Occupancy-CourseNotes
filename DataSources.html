@@ -1,0 +1,341 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Ecological Statistics - Occupancy Modelling - Data sources</title>
+</head>
+<body>
+
+
+<h1>Occupancy Modelling - Data sources</h1>
+<a href=index.html#SampleData>Sorted by type of study</a>
+
+
+<table border=1>
+
+<tr>
+   <th>Example</th>
+   <th>Source/Data</th>
+</tr>
+
+<a name="AmericanToad"></a>
+<tr>
+   <td><b>American Toad</b> </td>
+   <td> This was the  data used in MacKenzie et al (2002).  I downloaded it from the supplement area of the paper in Ecology.<br>
+   Single season single species occupancy<br>
+   <p>Refer to Excel workbook for more information.<br>
+   Extremely sparse data.
+   </td>
+   </tr>
+
+<a name="BLGR"></a>
+<tr>
+   <td><b>Blue Gross Beaks</b> </td>
+   <td>Data from <a href=https://sites.google.com/site/asrworkshop/home/schedule/r-occupancy-1>
+      an occupancy course from Mike Conroy</a><br>
+   Single season single species occupancy<br>
+   <p>An occupancy study was made on Blue Grosbeaks (Guiraca caerulea) on 41 old fields 
+     planted to longleaf pines (Pinus palustris) in southern Georgia, USA.
+    Surveys were 500 m transects across each field and were completed
+    three times during the breeding season in 2001.
+    Columns in the file are:
+    <ul>
+    <li>field - field number
+    <li>v1, v2, v3 - detection histories for each site on each of 3 visit during the 2001 breeding season.
+    <li>field.size - size of the fields
+    <li>bqi - Enrollment in bobwihte quail initiative; does occupancy increase if field belongs to this initiative?
+    <li>crop.hist - crop history
+    <li>crop1, crop2 - indicator variables for the crop history
+    <li> count1, count2, count3 - actual counts of birds detected in each visit
+    </ul>
+   </td>
+   </tr>
+
+
+<a name="BrookTrout"></a>
+<tr>
+   <td><b>Brook Trout</b> </td>
+   <td>This is from MARK demo files on occupancy.<br>
+   Single season single species occupancy<br>
+   <p>Collected via electrofishing three 50 m sections of streams at 77 sites in the Upper Chattachochee River basin.
+   77 streams  3 occasions, 4 covariates: elevation, cross sectional area each occasion.<br>
+   See <a href=http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html>here for further information</a><br>
+   </td>
+   </tr>
+
+<a name="BullFrogs"></a>
+<tr>
+   <td><b>Bull Frogs</b> </td>
+   <td> 500 Ponds were visited on each of 4 surveys.<br>
+   Single season single species occupancy - with heterogeneity<br>
+   <p>Demonstrates heterogeneous catchability models.
+   </td>
+   </tr>
+
+<a name='Butterfly'></a>
+<tr>
+   <td><b>Butterflies</b></td>
+   <td>
+   Single Species Multi Season<br>
+   Source: Mike Conroys notes on the web.<br>
+   Details unknown about this dataset - poke around his web pages for details.<br>
+   </td>
+   </tr>
+
+<a name='CalSpottedOwl'></a>
+<tr>
+   <td><b>California Spotted Owl</b></td>
+   <td> Multi State - Single Season<br>
+   Nichols et al (2007) Ecology 88, 1395-1400.<br>
+   Data available on Ecology archives and in MARK help files.<br>
+
+   <p>Five visits to sites. Recorded:<br>
+    &nbsp; &nbsp;   . = site not visited.<br>
+    &nbsp; &nbsp;   0 = site visited, but no owl detected.<br>
+    &nbsp; &nbsp;   1 = site visited, owl detected, but breeding status not confirmed.<br>
+    &nbsp; &nbsp;   2 = site visited, breeding status confirmed <br>
+    </td>
+   </tr>
+
+<a name="CooseBass"></a>
+<tr>
+   <td><b>Coose Bass</b></td>
+   <td>Multi State - Single Season<br>
+
+   <a href=http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html>Data Source</a><br>
+   <p>This example is of Coosa bass collected via electrofishing from four 50-80 m sections
+   in streams at 54 sites in the Upper Coosa River basin. The objective was to evaluate 
+   the effect of streamflow variability on Coosa bass reproduction. 
+   <p>States <br>
+     &nbsp; &nbsp;  species not detected (state = 0)<br>
+     &nbsp; &nbsp; adult present (state = 1)<br>
+     &nbsp; &nbsp; YOY present (state = 2)
+  </td>
+  </tr>
+
+<a name="Coyote"></a>
+<tr>
+   <td><b>Coyote, bobcats, grey foxes, and red foxes </b> </td>
+   <td>Coyote, bobcat, grey foxes, and red foxes co-occurence.
+   <p>  Rota CT, Ferreira MAR, Kays RW, Forrester TD, Kalies EL, McShea WJ, Parsons AW, Millspaugh JJ (2016).<br>
+   A multispecies occupancy model for two or more interacting species.<br>
+   Methods in Ecology and Evolution 7(10): 1164-1173. <br>
+   https://doi.org/10.1111/2041-210x.12587<br>
+
+   <p>Multi Species Single Season 
+   </td>
+   </tr>
+
+
+<a name="Pronghorn"></a>
+<tr>
+   <td><b>Pronghorn</b> </td>
+   <td>This is the Pronghorn dataset that ships with the <i>Presence</i> software.<br>
+   Single season single species occupancy<br>
+
+<a name="GrandSkinks"></a>
+<tr>
+   <td><b>Grand Skinks</b></td>
+   <td> Data has been collected on 352 tors over a 5 year (the ‘seasons’)<br> 
+   although not all tors (rock piles) were surveyed each year, with up to 3 surveys <br>
+   of each tor per year.  <br>
+   Single Species Multi Season<br>
+   Ships with PRESENCE.
+  </td>
+  </tr>
+
+
+<a name="Hawk"</a>
+<tr>
+  <td><b>Hawk breeding</b></td>
+  <td>Occupancy/breeding of hawks in BC<br>
+      Multi State Multi Season<br>
+  </td>
+  </tr>
+
+<a name='HouseFinch'</a>
+<tr>
+  <td><b>House Finches</b></td>
+  <td>Expansion of house finches in BBS<br>
+      Single Species Multi Season<br>
+      Ships with PRESENCE
+  </td>
+  </tr>
+
+<a name='Nightingales'</a>
+<tr>
+  <td><b>Nightingales</b></td>
+  <td>10 years x 8 visits per year of detection of nightingales.<br>
+      Single Species Multi Season<br>
+      Ships with R package blmeco
+  </td>
+  </tr>
+
+
+<a name="NSO"></a>
+<tr>
+   <td><b>Northern Spotted Owl</b> </td>
+   <td>Northern Spotted Owl data from MacKenzie et al (2012).  Ships with Presence.<br>
+   55 sites visited up to 8 times between 1997 and 2001. 
+   <p>Single Species Multi Season 
+   </td>
+   </tr>
+
+<a name="PossumCoyoteRaccoon"></a>
+<tr>
+   <td><b>Possum Coyote Raccoon</b> </td>
+   <td>Posssum, Coyote, Raccoon co-occurence.
+   <p>Fidino M, Simonis JL, Magle SB (2018) <br>
+   A multi-state dynamic occupancy model to estimate local colonization-extinction <br>
+   rates and patterns of co-occurrence between two or more interacting species. <br>
+   Methods in Ecology and Evolution, online in advance of print. <br>
+   https://doi.org/10.1111/2041-210x.13117  <br>
+
+   <p>Multi Species Multi Season 
+   </td>
+   </tr>
+
+
+<a name="Pronghorn"></a>
+<tr>
+   <td><b>Pronghorn</b> </td>
+   <td>This is the Pronghorn dataset that ships with the <i>Presence</i> software.<br>
+   Single season single species occupancy<br>
+    <a href=https://www.proteus.co.nz/publications/occupancy-estimation-and-modelling-second-edition/files-for-download/basic-single-season-example-pronghorn-antelope/>Available here</a>
+   </td>
+   </tr>
+
+<a name="Salamander"></a>
+<tr>
+   <td><b>Salamander</b> </td>
+   <td>This is the Salamander dataset that ships with the <i>Presence</i> software.<br>
+   Single season single species occupancy<br>
+   <p>Discussed in Mackenzie et al (2006) Chapter 4.<br>
+   Missing values added at random to the dataset to illustrate how the analysis is (mostly) unchanged
+   </td>
+   </tr>
+
+<a name="Salamander2"></a>
+<tr>
+   <td><b>Co-occurance of Salamanders</b> </td>
+   <td>This is the co-occurence salamander dataset that ships with PRESENCE.<br> 
+   Multiple species single season<br>
+   <p>Example, 8.4 in MacKenzie et al 2006.<br>
+   Co-occurence of two species of Salamanders in Smoky Mountains National Park.
+   </td>
+
+<a names-"SalamanderMultiSeason"></a>
+<tr>
+   <td><b>Salamander Multi Season</b></td>
+   <td>Salamanders over two seasons with covariates on elevation and stream type.<.br>
+   Single Species Multi Season<br>
+  
+   <p>Discussed n MacKenzie et al.<br>
+   Ships with PRESENCE.</td>
+   </tr>
+
+<a name="SSSS-sample"></a>
+<tr>
+   <td><b>SSSS-sample</b> </td>
+   <td>This is the sample dataset that ships with MARK.<br>
+   Single season single species occupancy<br>
+  <p>Source unknown.
+   </td>
+   </tr>
+
+<a name="Salamander"></a>
+<tr>
+   <td><b>Salamander</b> </td>
+   <td>This is the Salamander dataset that ships with the <i>Presence</i> software.<br>
+   Single season single species occupancy<br>
+   <p>Discussed in Mackenzie et al (2006) Chapter 4.<br>
+   Missing values added at random to the dataset to illustrate how the analysis is (mostly) unchanged
+   </td>
+   </tr>
+
+<a name="SpottedAndBarredOwl"></a>
+<tr>
+   <td><b>Spotted and Barred Owl Co-occurrence<b></td>
+   <td>Ships with PRESENCE. Appears to be based on:<br>
+   Modeling co-occurrence of northern spotted and barred owls: Accounting for detection probability differences.
+   Larissa L. Bailey, Janice A. Reid, Eric D. Forsman, James D. Nichols.
+   Biological Conservation 142 (2009) 2983Ð2989.<br>
+   <p>Multi season single season<br>
+   
+   <p>I only used the first 10 surveys in the season.</td>
+</tr>
+
+<a name='Sunfish'></a>
+<tr>
+   <td><b>Sun fish from the Flint River</b></td>
+   <td>Single Species Multi Season<br>
+       <a href=http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html>Discussed here</a>
+   </td>
+   </tr>
+
+<a name="Trout2"></a>
+<tr>
+   <td><b>Trout co-occurance</b></td>
+   <td> Multiple Species Single Season<br>
+   <p>BKTR and BLTR measured in watersheds in Alberta
+   Bull trout are native and require cold water; brook trout are from the east 
+   and are supposed to have warmer temperature preferences. 
+   <p>Each site was sampled twice, represented as "rep1" and "rep2" 
+   in the database. 
+   <p>I have more than a lot of predictors, but the two 
+   predictors of occupancy that I would be most interested in are temperature 
+   and discharge
+   </td>
+</tr>
+
+<a name="Weta"></a>
+<tr>
+   <td><b>Weta</b> </td>
+   <td>This is the Weta dataset that ships with the <i>Presence</i> software.<br>
+   Single season single species occupancy<br>
+   <p>Discussed in Mackenzie et al (2012)<br>
+   </td>
+   </tr>
+
+
+<a name="YellowBelliedToad"></a>
+<tr>
+   <td><b>YellowBelliedToad</b> </td>
+   <td>Detection of toad on two visits with julian date was a site-vist covariate.<br>
+   Single season single species occupancy<br><br>
+This is shipped with the <i>blmeco</i> package in <i>R</i>.
+   
+   </td>
+   </tr>
+
+</table>
+
+<hr><P>
+<address>
+[
+<A href="http://www.stat.sfu.ca/">SFU Statistics &amp; Actuarial Science Home</A>
+|
+<A href="http://www.sfu.ca/">SFU Home</A>]
+
+<br>
+<a href="mailto:cschwarz@stat.sfu.ca">Email comments or suggestions to cschwarz@stat.sfu.ca</a>
+<br><small>Last updated 2018-11-18</small>
+</body>
+</html> 
+
+
+
+
+
+HeteroCatchability 
+   Data extracted from 
+   http://coopunit.forestry.uga.edu/FORS8390/Labs/occupancy/lab_occupancy.htm
+   to illustrate fitting mixture Occupancy models with MARK.
+   No information on the sampling protocol or what this dataset refers to.
+
+
+FlintFish
+   Single Species Single Season Occupancy model
+   http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.html
+
+

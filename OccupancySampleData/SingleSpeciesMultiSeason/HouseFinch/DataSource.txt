@@ -1,0 +1,7 @@
+House Finches
+   Single Species Multi Season
+   Ships with Presence
+
+In 1942 a small population of house  finches (Carpoldacus mexicanus) 
+released in Long Island, NY. Population has expandedsince then.
+The North American Breeding Bird Survey (BBS) used to track expansion.26x 100-km distance bands from LINY established.Total of 694 sites (multiple in each band) established.Six 5-year periods (starting in 1976) define the seasons, i.e. season1 is from 1976-1980, season 2 is from 1981-1985, etc.50 stops in each season defined as "visit" to the site (not ideal).Covariates:   Distance from point of release in units of 1000 kms, i.e.      distance band 0.1 = 100-199 km from release point.   Detection prob as function of distance \crudely" modelled     using f = f0; 1g if    Finches detected on more than 10 stops in PREVIOUS years.

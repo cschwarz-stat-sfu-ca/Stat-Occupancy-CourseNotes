@@ -1,0 +1,10 @@
+/* occupancy estimation 3 occasions
+   2 groups ****/
+
+000 28 10;
+001 2 5;
+010 5 7;
+100 5 11;
+101 1 3;
+110 1 4;
+111 1 2;

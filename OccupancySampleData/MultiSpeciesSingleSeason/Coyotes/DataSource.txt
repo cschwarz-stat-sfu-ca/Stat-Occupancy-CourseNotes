@@ -1,0 +1,19 @@
+Coyotes bobcats, grey foxes, and red foxes
+
+   Single Season Multi Species
+
+   Camera trap detection / non-detection data for bobcats, coyotes, gray foxes, 
+   and red foxes from 6 mid-Atlantic states and the District of Columbia, USA; 
+   associated site-level covariates; and R and Stan code for fitting a 
+   multi-species occupancy model. See ReadMe for detailed file descriptions.
+
+   Rota CT, Ferreira MAR, Kays RW, Forrester TD, Kalies EL, McShea WJ, Parsons AW, Millspaugh JJ (2016) 
+   A multispecies occupancy model for two or more interacting species.
+   Methods in Ecology and Evolution 7(10): 1164-1173. 
+   https://doi.org/10.1111/2041-210x.12587
+
+   Rota CT, Ferreira MAR, Kays RW, Forrester TD, Kalies EL, McShea WJ, Parsons AW, Millspaugh JJ (2016) 
+   Data from: A multispecies occupancy model for two or more interacting species. 
+   Dryad Digital Repository. https://doi.org/10.5061/dryad.pq624
+
+ 

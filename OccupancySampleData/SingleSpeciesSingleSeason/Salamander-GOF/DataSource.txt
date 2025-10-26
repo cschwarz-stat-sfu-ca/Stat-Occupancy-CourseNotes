@@ -1,0 +1,7 @@
+ 
+Salamanders
+   Single Season Single Species
+
+   Ships with Presence.
+   Discussed in Mackenzie et al (2006) Chapter 4.
+   Shows how to do a goodness of fit assessment.

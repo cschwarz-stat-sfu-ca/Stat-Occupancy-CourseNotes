@@ -1,0 +1,14 @@
+
+California Spotted Owl 
+   MultiState  Single Season
+
+   Nichols et al (2007) Ecology 88, 1395-1400.^
+   Data available on Ecology archives and in MARK help files.^
+
+   Five visits to sites. Recorded: 
+       . = site not visited 
+       0 = site visited, but no owl detected 
+       1 = site visited, owl detected, but breeding status not confirmedM
+       2 = site visited, breeding status confirmed 
+
+   

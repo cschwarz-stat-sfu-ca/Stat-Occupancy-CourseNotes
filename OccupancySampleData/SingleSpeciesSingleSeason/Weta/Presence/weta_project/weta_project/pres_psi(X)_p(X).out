@@ -1,0 +1,60 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Sat Oct 22 16:56:51 2011,       Version 4.0111018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=weta.pao
+==>l=pres_psi(X)_p(X).out
+==>name=psi(*) p(*)
+==>model=11c
+==>lmt=200
+model=11c N,T-->72,5
+modtype-->1 
+
+********* Input Data summary *******
+Number of sites                = 72
+Number of sampling occasions   = 5
+Number of missing observations = 98
+Data checksum = 53860
+
+Naive occupancy estimate       = 0.4861
+
+NSiteCovs-->2
+site_covname[0]=Browsed
+site_covname[1]=Unbrowsed
+NSampCovs-->3
+samp_covname[0]=Obs1
+samp_covname[1]=Obs2
+samp_covname[2]=Obs3
+Primary periods=1 Secondary periods: 5
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ weta
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+modtype=1 N=72 T=5 Groups=1 bootstraps=0
+
+-->1-5**************
+
+
+Predefined Model: Detection probabilities are NOT time-specific
+
+Number of groups               = 1
+Number of parameters           = 2
+Number of function calls           = 46
+-2log(likelihood)              = 261.787155
+AIC                            = 265.787155
+
+varcov: nsig=6 eps=1.000000e-002
+Proportion of sites occupied    (Psi)   = 0.6166 (0.0885)
+
+Detection probabilities         (p):
+  grp   srvy      p            se(p)
+  ---   ----   ---------    -----------
+   1      1    0.349365     ( 0.053728)
+
+Variance-Covariance Matrix
+   psi    p(G1)
+ 0.0078 -0.0026 
+-0.0026  0.0029 
+------------------------------------------------------
+CPU time: 0.0 seconds
+

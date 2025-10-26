@@ -1,0 +1,8 @@
+SalamanderMultiSeason
+   Single Species Multi Season
+
+   Salamanders over two seasons with covariates on elevation and stream type.
+
+   Ships with PRESENCE
+
+ 

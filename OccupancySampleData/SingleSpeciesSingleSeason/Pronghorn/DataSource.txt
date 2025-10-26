@@ -1,0 +1,7 @@
+ 
+Pronghorn
+   Single Season Multi Species
+
+   Ships with Presence.
+   Fields are detections, amount of sage brush, distance from water, and aspect.
+ 

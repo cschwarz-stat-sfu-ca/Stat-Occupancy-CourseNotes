@@ -1,0 +1,7 @@
+ 
+Bullfrogs
+   Single season single species occupancy - with heterogeneity
+
+
+   500 Ponds were visited on each of 4 surveys.
+   Demonstrates heterogeneous catchability models.

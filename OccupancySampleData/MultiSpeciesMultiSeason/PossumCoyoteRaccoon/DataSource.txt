@@ -1,0 +1,19 @@
+
+Coyote Possum Raccoon
+
+   MultiState  Multi Season
+
+   Fidino M, Simonis JL, Magle SB (2018) 
+   A multi-state dynamic occupancy model to estimate local colonization-extinction 
+   rates and patterns of co-occurrence between two or more interacting species. 
+   Methods in Ecology and Evolution, online in advance of print. 
+   https://doi.org/10.1111/2041-210x.13117
+
+   Several years of data on occurrences of 3 species. See their paper.
+
+   Data extracted from Dryad Digital Repository. 
+   https://doi.org/10.5061/dryad.k5mp137  
+
+ 
+ 
+   

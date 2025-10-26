@@ -1,0 +1,380 @@
+PRESENCE - Model averages - 02-14-2018  Version 2.12.9
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PRESENCE AIC FILE:E:\Stat-Occupancy\OccupancyCourse-2018-02-12\CourseNotes\OccupancySampleData\Salamander\salamander_project\salamander._project\salamander..pa3
+
+nsites=39 nsrvys=5 nmods=3
+
+
+site:1 site1
+model  wgt   cumwgt     psi   se(psi)   model name
+    1  0.759  0.759   0.5831   0.1186   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934   0.5946   0.1226   1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi(site    1) model-avg-est:   0.4808 se=  0.2458 site1
+psi(avg.allsites) model-avg-est:   0.4808 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P[1]   se(P[1])   model name
+    1  0.759  0.759   0.1539   0.0584   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+P[1](site    1) model-avg-est:      .   se=      .   site1
+P[1](avg.allsites) model-avg-est:   0.0000 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P[2]   se(P[2])   model name
+    1  0.759  0.759   0.1539   0.0584   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+P[2](site    1) model-avg-est:      .   se=      .   site1
+P[2](avg.allsites) model-avg-est:   0.0000 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P[3]   se(P[3])   model name
+    1  0.759  0.759   0.3371   0.0768   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+P[3](site    1) model-avg-est:   0.0155 se=  0.4953 site1
+P[3](avg.allsites) model-avg-est:   0.0155 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P[4]   se(P[4])   model name
+    1  0.759  0.759   0.3371   0.0768   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+P[4](site    1) model-avg-est:   0.0155 se=659.3625 site1
+P[4](avg.allsites) model-avg-est:   0.0155 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P[5]   se(P[5])   model name
+    1  0.759  0.759   0.3371   0.0768   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+P[5](site    1) model-avg-est:   0.0155 se=659.3625 site1
+P[5](avg.allsites) model-avg-est:   0.0155 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    1) model-avg-est:   0.5190 se=659.5646 site1
+
+site:2 site2
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    2) model-avg-est:   0.5190 se=659.5646 site2
+
+site:3 site3
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    3) model-avg-est:   0.5190 se=659.5646 site3
+
+site:4 site4
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    4) model-avg-est:   0.5190 se=659.5646 site4
+
+site:5 site5
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    5) model-avg-est:   0.5190 se=659.5646 site5
+
+site:6 site6
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    6) model-avg-est:   0.5190 se=659.5646 site6
+
+site:7 site7
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    7) model-avg-est:   0.5190 se=659.5646 site7
+
+site:8 site8
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    8) model-avg-est:   0.5190 se=659.5646 site8
+
+site:9 site9
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site    9) model-avg-est:   0.5190 se=659.5646 site9
+
+site:10 site10
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   10) model-avg-est:   0.5190 se=659.5646 site10
+
+site:11 site11
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   11) model-avg-est:   0.5190 se=659.5646 site11
+
+site:12 site12
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   12) model-avg-est:   0.5190 se=659.5646 site12
+
+site:13 site13
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   13) model-avg-est:   0.5190 se=659.5646 site13
+
+site:14 site14
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   14) model-avg-est:   0.5190 se=659.5646 site14
+
+site:15 site15
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   15) model-avg-est:      .   se=      .   site15
+
+site:16 site16
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   16) model-avg-est:      .   se=      .   site16
+
+site:17 site17
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   17) model-avg-est:      .   se=      .   site17
+
+site:18 site18
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   18) model-avg-est:      .   se=      .   site18
+
+site:19 site19
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   19) model-avg-est:      .   se=      .   site19
+
+site:20 site20
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   20) model-avg-est:      .   se=      .   site20
+
+site:21 site21
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   21) model-avg-est:      .   se=      .   site21
+
+site:22 site22
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   22) model-avg-est:      .   se=      .   site22
+
+site:23 site23
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   23) model-avg-est:      .   se=      .   site23
+
+site:24 site24
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   24) model-avg-est:      .   se=      .   site24
+
+site:25 site25
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   25) model-avg-est:      .   se=      .   site25
+
+site:26 site26
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   26) model-avg-est:      .   se=      .   site26
+
+site:27 site27
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   27) model-avg-est:      .   se=      .   site27
+
+site:28 site28
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   28) model-avg-est:      .   se=      .   site28
+
+site:29 site29
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   29) model-avg-est:      .   se=      .   site29
+
+site:30 site30
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   30) model-avg-est:      .   se=      .   site30
+
+site:31 site31
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   31) model-avg-est:      .   se=      .   site31
+
+site:32 site32
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   32) model-avg-est:      .   se=      .   site32
+
+site:33 site33
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   33) model-avg-est:      .   se=      .   site33
+
+site:34 site34
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   34) model-avg-est:      .   se=      .   site34
+
+site:35 site35
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   0.2258   0.1369   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   35) model-avg-est:      .   se=      .   site35
+
+site:36 site36
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   36) model-avg-est:   0.5190 se=659.5646 site36
+
+site:37 site37
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   37) model-avg-est:   0.5190 se=659.5646 site37
+
+site:38 site38
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   38) model-avg-est:   0.5190 se=659.5646 site38
+
+site:39 site39
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.759  0.759   1.0000   0.0000   psi((),p(1=2, 3=4=5)
+    2  0.175  0.934    .        .       1 group, Constant P
+    3  0.066  1.000    .        .       1 group, Survey-specific P
+ 
+psi-cond(site   39) model-avg-est:   0.5190 se=659.5646 site39
+psi-cond(avg.allsites) model-avg-est:   0.5190 sd=  0.0000
+

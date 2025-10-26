@@ -1,0 +1,4 @@
+Changes to the RPResence code
+
+- Update calls to modAvg() to use AICc rather than simply AIC
+- Perhaps redefine the function?

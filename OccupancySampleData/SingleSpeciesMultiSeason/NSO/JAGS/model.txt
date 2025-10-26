@@ -1,0 +1,82 @@
+
+    ############################################################
+    
+    model {
+    # estimate the initial occupancy probabilities
+    for(i in 1:Nsites){
+       logit(psi[i,1]) = inprod(beta.psi[1:(Ncovar.psi-1)], covar.psi[i, 2:Ncovar.psi])
+    }
+
+    # estimate the extinction probabilities
+    for(i in 1:(Nsites*(Nyears-1))){
+      #epsilon[   site            , year  ]             <-               beta values                    covariates
+       logit(epsilon[ covar.epsilon[i,1], covar.epsilon[i,2]]) <- inprod(beta.epsilon[1:(Ncovar.epsilon-2)], covar.epsilon[i,3:Ncovar.epsilon])
+    }
+
+    # estimate the gamma probabilities
+    for(i in 1:(Nsites*(Nyears-1))){
+      #gamma[      site            , year  ]     <-               beta values                    covariates
+      logit(gamma[ covar.gamma[i,1], covar.gamma[i,2]]) <- inprod(beta.gamma[1:(Ncovar.gamma-2)], covar.gamma[i,3:Ncovar.gamma])
+    }
+    
+    # project the psi forward for each site
+    for(i in 1:Nsites){
+       for(j in 2:Nyears){
+         psi[i,j] <- psi[i,j-1]*(1-epsilon[i,j-1]) + (1-psi[i,j-1])*gamma[i,j-1]
+       }
+    }
+
+    # set up the initial actual occupancy state model, i.e. is the site actually occupied or not
+    for(i in 1:Nsites){
+        z[i,1] ~  dbern(psi[i,1])
+    }
+    for(i in 1:Nsites){
+       for(j in 2:Nyears){
+         z[i,j] ~ dbern( z[i,j-1]*(1-epsilon[i,j-1]) + (1-z[i,j-1])*gamma[i,j-1])
+       }
+    }
+    
+    # the observation model.
+    for(j in 1:Nsites.visits){
+       logit(p.detect[j]) <- inprod(beta.p[1:(Ncovar.p-2)], covar.p[j, 3:Ncovar.p])
+       p.z[j] <- z[Site[j],Year[j]]*p.detect[j]
+       History[j] ~ dbern(p.z[j])
+    }
+
+    # priors
+    #beta.psi[1] ~ dnorm(0, .01)  # this is the intercept
+    for(i in 1:(Ncovar.psi-1)){
+       beta.psi[i]   ~ dnorm(0, .0001)
+    }
+
+    #beta.epsilon[1] ~ dnorm(0, .01)  # this is the intercept
+    for(i in 1:(Ncovar.epsilon-2)){
+       beta.epsilon[i]   ~ dnorm(0, .0001)
+    }
+
+    #beta.gamma[1] ~ dnorm(0, .01) # this is the intercept
+    for(i in 1:(Ncovar.gamma-2)){
+       beta.gamma[i]   ~ dnorm(0, .0001)
+    }
+
+    #beta.p[1] ~ dnorm(0, .01) # this is the intercept on the logit scale
+    for(i in 1:(Ncovar.p-2)){
+       beta.p[i]   ~ dnorm(0, .0001)
+    }
+    
+    # derived variables
+    # number of occupied sites
+    for(i in 1:Nyears){
+       occ.sites[i] <- sum(z[1:Nsites,i])
+    }
+
+    # population growth rates
+    for(i in 1:Nsites){
+       lambda      [i,1:(Nyears-1)] <- psi[i,2:Nyears]/psi[i,1:(Nyears-1)]
+       log.lambda.prime[i,1:(Nyears-1)] <- logit(psi[i,2:Nyears]) - logit(psi[i,1:(Nyears-1)]) 
+       for(j in 1:(Nyears-1)){  # exp() cannot be vectorized
+          lambda.prime[i,j] <- exp( log.lambda.prime[i,j] ) 
+       }
+    }
+
+}

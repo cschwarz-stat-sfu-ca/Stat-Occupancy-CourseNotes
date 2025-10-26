@@ -1,0 +1,164 @@
+
+   Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    12-Feb-2020 19:15:49    Page  001
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   This version was compiled by GCC version 8.1.0 using the options: 
+     -cpp -D__DYNAMIC__ -D IEEE -D DBLEPRECISION -fPIC -m64
+     -mmacosx-version-min=10.11.0 -mtune=core2 -O2 -fimplicit-none -fbounds-check
+     -funroll-loops -ftree-vectorize -ffpe-summary=invalid,zero,overflow,underflow
+     -fno-unsafe-math-optimizations -frounding-math -fsignaling-nans -fopenmp.
+
+   This problem will use 11 of 12 possible threads.
+
+
+  INPUT --- proc title ;
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+
+  INPUT --- proc chmatrix occasions= 3 groups= 2 etype= Occupancy 
+  INPUT --- Nodes= 101 ICMeans NoHist hist=  13 ;
+
+  INPUT ---    time interval 1 1 1 ;
+
+  INPUT ---    glabel(1)=bqin;
+
+  INPUT ---    glabel(2)=bqiy;
+
+   * *  WARNING  * *   At least a pair of the encounter histories are duplicates. 
+
+      Number of unique encounter histories read was 8.
+
+      Number of individual covariates read was 0.
+      Time interval lengths are all equal to 1.
+
+      Data type number is 27
+      Data type is Occupancy Estimation with Detection < 1                                                             
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    12-Feb-2020 19:15:49    Page  002
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc estimate link=Logit NOLOOP varest=2ndPart    ;
+
+
+  INPUT --- model={ p(~time)Psi(~1) };
+
+  INPUT ---    group=1 p    rows=1 cols=3 Square ;
+  INPUT ---        1 2 3 ;
+
+  INPUT ---    group=2 p    rows=1 cols=3 Square ;
+  INPUT ---        1 2 3 ;
+
+  INPUT ---    group=1 Psi    rows=1 cols=1 Square ;
+  INPUT ---        4 ;
+
+  INPUT ---    group=2 Psi    rows=1 cols=1 Square ;
+  INPUT ---        4 ;
+
+  INPUT ---    design matrix constraints=4 covariates=4;
+  INPUT ---        1 0 0 0;
+  INPUT ---        1 1 0 0;
+  INPUT ---        1 0 1 0;
+  INPUT ---        0 0 0 1;
+  INPUT ---       blabel(1)=p:(Intercept);
+  INPUT ---       blabel(2)=p:time2;
+  INPUT ---       blabel(3)=p:time3;
+  INPUT ---       blabel(4)=Psi:(Intercept);
+  INPUT ---       rlabel(1)=p gn a0 t1;
+  INPUT ---       rlabel(2)=p gn a1 t2;
+  INPUT ---       rlabel(3)=p gn a2 t3;
+  INPUT ---       rlabel(4)=Psi gn a0 t1;
+
+ Link Function Used is LOGIT        
+
+ Variance Estimation Procedure Used is 2ndPart 
+ -2logL(saturated) = 154.63554     
+ Effective Sample Size = 41
+
+ Number of function evaluations was 16 for 4 parameters.
+ Time for numerical optimization was 0.02 seconds.     
+ -2logL { p(~time)Psi(~1) } = 167.29503     
+ Penalty { p(~time)Psi(~1) } = 0.0000000     
+ Gradient { p(~time)Psi(~1) }:
+ -0.1887406E-05   0.000000     -0.1561058E-05 -0.6319141E-06
+ Maximum ABS(G) { p(~time)Psi(~1) } = 0.1887406E-05 
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    12-Feb-2020 19:15:49    Page  003
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+ S Vector { p(~time)Psi(~1) }:
+   26.95741      8.778153      2.414077      1.805909    
+ Time to compute number of parameters was 0.01 seconds.     
+ Ratio Threshold = 50.000000       Max Gap (2/3) = 3.6362359       Next Max Gap (1/2) = 3.0709657     
+ Gap Method for Num. of Estimated Parameters { p(~time)Psi(~1) } = 4          
+ Threshold { p(~time)Psi(~1) } = 0.3774813E-05                 
+ Numerical Threshold Method for Num. of Estimated Parameters { p(~time)Psi(~1) } = 4          
+ Number of Estimated Parameters { p(~time)Psi(~1) } = 4          
+ DEVIANCE { p(~time)Psi(~1) } = 12.659488                     
+ DEVIANCE Degrees of Freedom { p(~time)Psi(~1) } = 7            
+ c-hat { p(~time)Psi(~1) } = 1.8084984                     
+ AIC { p(~time)Psi(~1) } = 175.29503                  
+ AICc { p(~time)Psi(~1) } = 176.40614                    
+ BIC { p(~time)Psi(~1) } = 182.14932                    
+ Pearson Chisquare { p(~time)Psi(~1) } = 8.8613796                  
+ Possible Encounter Histories { p(~time)Psi(~1) } = 16             
+ Pearson Chisquare df { p(~time)Psi(~1) } = 10        
+ Pearson chat { p(~time)Psi(~1) } = 0.8861380                  
+ Sum(Observed/Expected) { p(~time)Psi(~1) } = 15.763881                  
+ s-bar { p(~time)Psi(~1) } = -0.0168657                 
+ Fletcher chat { p(~time)Psi(~1) } = 0.9013396                  
+
+
+                     LOGIT Link Function Parameters of { p(~time)Psi(~1) }
+                                                              95% Confidence Interval
+ Parameter                    Beta         Standard Error      Lower           Upper
+ -------------------------  --------------  --------------  --------------  --------------
+    1:p:(Intercept)         -0.0105659       0.3566281      -0.7095571       0.6884252    
+    2:p:time2                0.4489867       0.4772539      -0.4864310       1.3844044    
+    3:p:time3                0.2218307       0.4717450      -0.7027895       1.1464509    
+    4:Psi:(Intercept)        2.0183671       0.7358609       0.5760797       3.4606545    
+
+
+                     Real Function Parameters of { p(~time)Psi(~1) }
+                                                               95% Confidence Interval
+  Parameter                  Estimate       Standard Error      Lower           Upper
+ --------------------------  --------------  --------------  --------------  --------------
+     1:p gn a0 t1             0.4973585       0.0891545       0.3296967       0.6656165                          
+     2:p gn a1 t2             0.6078827       0.0902286       0.4246992       0.7650113                          
+     3:p gn a2 t3             0.5526206       0.0900910       0.3768454       0.7161592                          
+     4:Psi gn a0 t1           0.8827121       0.0761848       0.6401649       0.9695473                          
+
+
+                      Estimates of Derived Parameters
+                Occupancy Estimates of { p(~time)Psi(~1) }
+                                            95% Confidence Interval
+ Group   Psi-hat         Standard Error      Lower           Upper
+ -----   --------------  --------------  --------------  --------------
+   1      0.8827121       0.0761848       0.6401649       0.9695473    
+   2      0.8827121       0.0761848       0.6401649       0.9695473    
+
+   CPU Time for the last procedure was 0.03 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019    12-Feb-2020 19:15:49    Page  004
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc stop;
+
+     CPU Time in minutes for this job was 0.00
+
+     Time Start = 19:15:49.640   Time End = 19:15:49.653
+
+     Wall Clock Time in minutes for this job was 0.00
+
+
+          E X E C U T I O N   S U C C E S S F U L 

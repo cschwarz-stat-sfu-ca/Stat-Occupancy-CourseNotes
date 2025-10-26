@@ -1,0 +1,335 @@
+PRESENCE - Model averages - 02-14-2018  Version 2.12.9
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PRESENCE AIC FILE:e:\stat-occupancy\occupancycourse-2018-02-12\coursenotes\occupancysampledata\salamander\salamander-missing_project\salamander-missing.pa3
+
+nsites=39 nsrvys=5 nmods=2
+
+
+site:1 site1
+model  wgt   cumwgt     psi   se(psi)   model name
+    1  0.971  0.971   0.4341   0.1025   psi(*) p(visit)
+    2  0.029  1.000   0.4570   0.1110   psi(*) p(*)
+ 
+psi(site    1) model-avg-est:   0.4348 se=  0.1028 site1
+psi(avg.allsites) model-avg-est:   0.4348 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P1[1]   se(P1[1])   model name
+    1  0.971  0.971   0.2363   0.1091   psi(*) p(visit)
+    2  0.029  1.000   0.2897   0.0688   psi(*) p(*)
+ 
+P1[1](site    1) model-avg-est:   0.2379 se=  0.1084 site1
+P1[1](avg.allsites) model-avg-est:   0.2379 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P1[2]   se(P1[2])   model name
+    1  0.971  0.971   0.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   0.2897   0.0688   psi(*) p(*)
+ 
+P1[2](site    1) model-avg-est:   0.0085 se=  0.0167 site1
+P1[2](avg.allsites) model-avg-est:   0.0085 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P1[3]   se(P1[3])   model name
+    1  0.971  0.971   0.4244   0.1450   psi(*) p(visit)
+    2  0.029  1.000   0.2897   0.0688   psi(*) p(*)
+ 
+P1[3](site    1) model-avg-est:   0.4205 se=  0.1451 site1
+P1[3](avg.allsites) model-avg-est:   0.4205 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P1[4]   se(P1[4])   model name
+    1  0.971  0.971   0.4774   0.1403   psi(*) p(visit)
+    2  0.029  1.000   0.2897   0.0688   psi(*) p(*)
+ 
+P1[4](site    1) model-avg-est:   0.4719 se=  0.1420 site1
+P1[4](avg.allsites) model-avg-est:   0.4719 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     P1[5]   se(P1[5])   model name
+    1  0.971  0.971   0.3839   0.1358   psi(*) p(visit)
+    2  0.029  1.000   0.2897   0.0688   psi(*) p(*)
+ 
+P1[5](site    1) model-avg-est:   0.3811 se=  0.1352 site1
+P1[5](avg.allsites) model-avg-est:   0.3811 sd=  0.0000
+
+
+site:1 site1
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site    1) model-avg-est:   1.0000 se=  0.0000 site1
+
+site:2 site2
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1587   0.0945   psi(*) p(visit)
+    2  0.029  1.000   0.2317   0.1138   psi(*) p(*)
+ 
+psi-cond(site    2) model-avg-est:   0.1608 se=  0.0957 site2
+
+site:3 site3
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1587   0.0945   psi(*) p(visit)
+    2  0.029  1.000   0.2317   0.1138   psi(*) p(*)
+ 
+psi-cond(site    3) model-avg-est:   0.1608 se=  0.0957 site3
+
+site:4 site4
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site    4) model-avg-est:   1.0000 se=  0.0000 site4
+
+site:5 site5
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1587   0.0945   psi(*) p(visit)
+    2  0.029  1.000   0.2317   0.1138   psi(*) p(*)
+ 
+psi-cond(site    5) model-avg-est:   0.1608 se=  0.0957 site5
+
+site:6 site6
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1587   0.0945   psi(*) p(visit)
+    2  0.029  1.000   0.1764   0.1043   psi(*) p(*)
+ 
+psi-cond(site    6) model-avg-est:   0.1592 se=  0.0948 site6
+
+site:7 site7
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site    7) model-avg-est:   1.0000 se=  0.0000 site7
+
+site:8 site8
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site    8) model-avg-est:   1.0000 se=  0.0000 site8
+
+site:9 site9
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site    9) model-avg-est:   1.0000 se=  0.0000 site9
+
+site:10 site10
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   10) model-avg-est:   1.0000 se=  0.0000 site10
+
+site:11 site11
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   11) model-avg-est:   1.0000 se=  0.0000 site11
+
+site:12 site12
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   12) model-avg-est:   1.0000 se=  0.0000 site12
+
+site:13 site13
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   13) model-avg-est:   1.0000 se=  0.0000 site13
+
+site:14 site14
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   14) model-avg-est:   1.0000 se=  0.0000 site14
+
+site:15 site15
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1498   0.0921   psi(*) p(visit)
+    2  0.029  1.000   0.1764   0.1043   psi(*) p(*)
+ 
+psi-cond(site   15) model-avg-est:   0.1506 se=  0.0926 site15
+
+site:16 site16
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   16) model-avg-est:   0.0990 se=  0.0730 site16
+
+site:17 site17
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   17) model-avg-est:   0.0990 se=  0.0730 site17
+
+site:18 site18
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   18) model-avg-est:   0.0990 se=  0.0730 site18
+
+site:19 site19
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   19) model-avg-est:   0.0990 se=  0.0730 site19
+
+site:20 site20
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   20) model-avg-est:   0.0990 se=  0.0730 site20
+
+site:21 site21
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1587   0.0945   psi(*) p(visit)
+    2  0.029  1.000   0.1764   0.1043   psi(*) p(*)
+ 
+psi-cond(site   21) model-avg-est:   0.1592 se=  0.0948 site21
+
+site:22 site22
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   22) model-avg-est:   0.0990 se=  0.0730 site22
+
+site:23 site23
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   23) model-avg-est:   0.0990 se=  0.0730 site23
+
+site:24 site24
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   24) model-avg-est:   0.0990 se=  0.0730 site24
+
+site:25 site25
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   25) model-avg-est:   0.0990 se=  0.0730 site25
+
+site:26 site26
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1720   0.0974   psi(*) p(visit)
+    2  0.029  1.000   0.1764   0.1043   psi(*) p(*)
+ 
+psi-cond(site   26) model-avg-est:   0.1721 se=  0.0976 site26
+
+site:27 site27
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   27) model-avg-est:   0.0990 se=  0.0730 site27
+
+site:28 site28
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   28) model-avg-est:   0.0990 se=  0.0730 site28
+
+site:29 site29
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   29) model-avg-est:   0.0990 se=  0.0730 site29
+
+site:30 site30
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   30) model-avg-est:   0.0990 se=  0.0730 site30
+
+site:31 site31
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   31) model-avg-est:   0.0990 se=  0.0730 site31
+
+site:32 site32
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.1498   0.0921   psi(*) p(visit)
+    2  0.029  1.000   0.1764   0.1043   psi(*) p(*)
+ 
+psi-cond(site   32) model-avg-est:   0.1506 se=  0.0926 site32
+
+site:33 site33
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   33) model-avg-est:   0.0990 se=  0.0730 site33
+
+site:34 site34
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   34) model-avg-est:   0.0990 se=  0.0730 site34
+
+site:35 site35
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   0.0980   0.0723   psi(*) p(visit)
+    2  0.029  1.000   0.1320   0.0918   psi(*) p(*)
+ 
+psi-cond(site   35) model-avg-est:   0.0990 se=  0.0730 site35
+
+site:36 site36
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   36) model-avg-est:   1.0000 se=  0.0000 site36
+
+site:37 site37
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   37) model-avg-est:   1.0000 se=  0.0000 site37
+
+site:38 site38
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   38) model-avg-est:   1.0000 se=  0.0000 site38
+
+site:39 site39
+model  wgt   cumwgt     psi-cond   se(psi-cond)   model name
+    1  0.971  0.971   1.0000   0.0000   psi(*) p(visit)
+    2  0.029  1.000   1.0000   0.0000   psi(*) p(*)
+ 
+psi-cond(site   39) model-avg-est:   1.0000 se=  0.0000 site39
+psi-cond(avg.allsites) model-avg-est:   0.4348 sd=  0.4291
+

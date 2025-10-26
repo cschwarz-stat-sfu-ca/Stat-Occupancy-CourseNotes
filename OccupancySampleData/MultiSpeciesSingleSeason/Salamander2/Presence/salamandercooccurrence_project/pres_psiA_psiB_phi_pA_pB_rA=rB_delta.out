@@ -1,0 +1,178 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Thu Oct 27 22:32:18 2011,       Version 4.0111018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>i=salamandercooccurence.pao
+==>l=pres_psiA_psiB_phi_pA_pB_rA=rB_delta.out
+==>name=psiA,psiB,phi,pA,pB,rA=rB,delta
+==>model=3000
+==>j=c:\documents and settings\cschwarz\desktop\salamandercooccurence\salamandercooccurence_project\salamandercooccurence.dm
+==>lmt=200
+model=3000 N,T-->176,5
+modtype-->3 
+
+********* Input Data summary *******
+Number of sites                = 176
+Number of sampling occasions   = 5
+Number of missing observations = 30
+Data checksum = 1775
+
+Naive occupancy estimate       = 0.5114
+
+NSiteCovs-->1
+site_covname[0]=Elevation(m)
+NSampCovs-->0
+Primary periods=1 Secondary periods: 5
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Salamander Co-occurence
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+modtype=3 N=176 T=5 Groups=1 bootstraps=0
+
+-->1-5
+Matrix 1: rows=4, cols=4
+            -,a1,a2,a3,
+psiA          1 0 0
+psiB          0 1 0
+phi           0 0 1
+========================
+
+Matrix 2: rows=26, cols=5
+            -,b1,b2,b3,b4,
+pA[1]         1 0 0 0
+pA[2]         1 0 0 0
+pA[3]         1 0 0 0
+pA[4]         1 0 0 0
+pA[5]         1 0 0 0
+pB[1]         0 1 0 0
+pB[2]         0 1 0 0
+pB[3]         0 1 0 0
+pB[4]         0 1 0 0
+pB[5]         0 1 0 0
+rA[1]         0 0 1 0
+rA[2]         0 0 1 0
+rA[3]         0 0 1 0
+rA[4]         0 0 1 0
+rA[5]         0 0 1 0
+rB[1]         0 0 1 0
+rB[2]         0 0 1 0
+rB[3]         0 0 1 0
+rB[4]         0 0 1 0
+rB[5]         0 0 1 0
+delta[1]      0 0 0 1
+delta[2]      0 0 0 1
+delta[3]      0 0 0 1
+delta[4]      0 0 0 1
+delta[5]      0 0 0 1
+========================
+
+Matrix 3: rows=0, cols=0
+========================
+
+Matrix 4: rows=0, cols=0
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+Two Species, Single Season Model:
+---------------------------------
+-- standard parameterization requested: psiA,psiB,phi,pA,pB,rA,rB,delta
+-- stacked input: 1st 88 records=species A, last 88 records=species B
+Number of sites                = 88
+Number of sampling occasions   = 5
+Number of missing observations = 15
+
+Number of parameters           = 7
+
+Model:psiA,psiB,phi,pA,pB,rA=rB,delta flags:(0 0 0 0) (ind-occ det-eq det-ind init)
+
+NPar=7 s=1-5
+
+Number of parameters           = 7
+Number of function calls           = 226
+-2log(likelihood)              = 736.3327
+AIC                            = 750.3327
+
+varcov: nsig=6 eps=1.000000e-002
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psiA                             :   0.270449    0.227750
+A2   psiB                             :  -0.068811    0.215981
+A3   phi                              :  -0.429764    0.170071
+B1   pA[1]                            :   0.154664    0.168573
+B2   pB[1]                            :   2.160984    0.383491
+B3   rA[1]                            :   0.110803    0.193784
+B4   delta[1]                         :  -0.111276    0.121349
+
+Variance-Covariance Matrix of Untransformed estimates (Beta's):
+              A1         A2         A3         B1         B2         B3         B4  
+     A1    0.051870  -0.017325   0.012329  -0.002436   0.014449  -0.006601   0.000991
+     A2   -0.017325   0.046648   0.009064  -0.000205   0.001653  -0.001936  -0.000112
+     A3    0.012329   0.009064   0.028924   0.001078   0.015195  -0.008017   0.000898
+     B1   -0.002436  -0.000205   0.001078   0.028417   0.000693  -0.000649   0.000710
+     B2    0.014449   0.001653   0.015195   0.000693   0.147065  -0.027443   0.005701
+     B3   -0.006601  -0.001936  -0.008017  -0.000649  -0.027443   0.037552   0.000226
+     B4    0.000991  -0.000112   0.000898   0.000710   0.005701   0.000226   0.014726
+------------------------------
+
+============================================================
+
+   Individual Site estimates of <psiA> 
+                Site               estimate  Std.err   95% conf. interval
+psiA            1 site 1          :  0.5672   0.0559     0.4561 - 0.6719 
+
+   Individual Site estimates of <psiB> 
+                Site               estimate  Std.err   95% conf. interval
+psiB            1 site 1          :  0.4828   0.0539     0.3794 - 0.5877 
+
+   Individual Site estimates of <phi> 
+                Site               estimate  Std.err   95% conf. interval
+phi             1 site 1          :  0.6507   0.1107     0.4662 - 0.9081 
+
+   Individual Site estimates of <pA[1]> 
+                Site               estimate  Std.err   95% conf. interval
+pA[1]           1 site 1          :  0.5386   0.0419     0.4562 - 0.6189 
+pA[2]           1 site 1          :  0.5386   0.0419     0.4562 - 0.6189 
+pA[3]           1 site 1          :  0.5386   0.0419     0.4562 - 0.6189 
+pA[4]           1 site 1          :  0.5386   0.0419     0.4562 - 0.6189 
+pA[5]           1 site 1          :  0.5386   0.0419     0.4562 - 0.6189 
+
+   Individual Site estimates of <pB[1]> 
+                Site               estimate  Std.err   95% conf. interval
+pB[1]           1 site 1          :  0.8967   0.0355     0.8037 - 0.9485 
+pB[2]           1 site 1          :  0.8967   0.0355     0.8037 - 0.9485 
+pB[3]           1 site 1          :  0.8967   0.0355     0.8037 - 0.9485 
+pB[4]           1 site 1          :  0.8967   0.0355     0.8037 - 0.9485 
+pB[5]           1 site 1          :  0.8967   0.0355     0.8037 - 0.9485 
+
+   Individual Site estimates of <rA[1]> 
+                Site               estimate  Std.err   95% conf. interval
+rA[1]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rA[2]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rA[3]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rA[4]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rA[5]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+
+   Individual Site estimates of <rB[1]> 
+                Site               estimate  Std.err   95% conf. interval
+rB[1]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rB[2]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rB[3]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rB[4]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+rB[5]           1 site 1          :  0.5277   0.0483     0.4331 - 0.6203 
+
+   Individual Site estimates of <delta[1]> 
+                Site               estimate  Std.err   95% conf. interval
+delta[1]        1 site 1          :  0.8947   0.1086     0.7053 - 1.1349 
+delta[2]        1 site 1          :  0.8947   0.1086     0.7053 - 1.1349 
+delta[3]        1 site 1          :  0.8947   0.1086     0.7053 - 1.1349 
+delta[4]        1 site 1          :  0.8947   0.1086     0.7053 - 1.1349 
+delta[5]        1 site 1          :  0.8947   0.1086     0.7053 - 1.1349 
+
+CPU time: 0.0 seconds
+

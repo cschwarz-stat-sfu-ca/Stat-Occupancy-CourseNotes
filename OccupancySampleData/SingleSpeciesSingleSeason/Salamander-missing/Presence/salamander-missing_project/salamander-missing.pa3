@@ -1,0 +1,19 @@
+TITLE:Salamander-missing analysis
+DATAFILE:salamander-missing.pao
+SITECOVFILE:
+NSITES:39
+NSURVEYS:5
+NSRVY/SEASON:5
+NMETH/SRVY:1
+NSITECOV:0
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:single
+NMODELS:2
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(*) p(visit)	  129.31	     0.00	   0.9708	   1.0000	    6	  117.31	
+psi(*) p(*)	  136.32	     7.01	   0.0292	   0.0300	    2	  132.32	

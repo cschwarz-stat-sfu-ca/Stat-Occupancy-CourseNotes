@@ -1,0 +1,7 @@
+ Northern Spotted Owl
+
+   Northern Spotted Owl data from MacKenzie et al (2012).  Ships with Presence.
+
+   55 sites visited up to 8 times between 1997 and 2001.
+   
+   Single Species Multi Season

@@ -1,0 +1,148 @@
+
+
+PRESENCE - Presence/Absence-Site Occupancy data analysis
+Tue Feb 13 10:27:36 2018,       Version 2.12.8.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+==>C:\Progra~2\Presence\presence.exe
+==>i=e:\stat-occupancy\occupancycourse-2018-02-12\coursenotes\occupancysampledata\bluegrossbeaks\grossbeak-new.pao
+==>l=pres_psi(X)___p(t).out
+==>name=psi(*)   p(t)
+==>j=salamander-new.dm
+varcov: nsig=6 eps=1.000000e-002
+no model name N,T-->41,3
+
+
+
+
+********* Input Data summary *******
+Number of sites                = 41
+Number of sampling occasions   = 3
+Number of states               = 2
+Number of missing observations = 0
+Data checksum = 12422
+
+NSiteCovs-->0
+NSampCovs-->0
+Primary periods=1 Secondary periods: 3
+Naive occupancy estimate       = 0.8049
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ grossbeak
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+N=41 T=3 Groups=1 bootstraps=0
+
+-->1-3
+Matrix 1: rows=2, cols=2
+            -,a1,
+psi           1
+========================
+
+Matrix 2: rows=4, cols=4
+            -,b1,b2,b3,
+P1[1]         1 0 0
+P1[2]         0 1 0
+P1[3]         0 0 1
+========================
+
+Matrix 3: rows=0, cols=0
+========================
+
+Matrix 4: rows=0, cols=0
+========================
+
+Matrix 5: rows=0, cols=0
+========================
+
+Matrix 6: rows=0, cols=0
+========================
+
+modtype=1
+
+Custom Model: psi(*)   p(t)
+
+attempt 0/0 (iv= 0.00  0.00  0.00...), optmiz done. -2loglike= 167.2950
+0 random initial value vectors attempted:
+Initial values:
+    0.0000    0.0000    0.0000    0.0000
+Number of significant digits   =   8.0
+
+Model has been fit using the logistic link.
+
+
+Number of parameters           = 4
+Number of function calls           = 95
+-2log(likelihood)              = 167.2950
+AIC                            = 175.2950
+
+Untransformed Estimates of coefficients for covariates (Beta's)
+======================================================================
+                                          estimate    std.error
+A1   psi.a1                           :   2.018367    0.735846
+B1   P1[1].b1                         :  -0.010566    0.356626
+B2   P1[2].b2                         :   0.438421    0.378533
+B3   P1[3].b3                         :   0.211265    0.364397
+
+============================================================
+
+   Individual Site estimates of <psi>
+                Site               estimate  Std.err   95% conf. interval
+psi             1 site1           :  0.8827   0.0762     0.6402 -  0.9695
+
+============================================================
+
+   Individual Site estimates of <P1[1]>
+                Site               estimate  Std.err   95% conf. interval
+P1[1]           1 site1           :  0.4974   0.0892     0.3297 -  0.6656
+P1[2]           1 site1           :  0.6079   0.0902     0.4247 -  0.7650
+P1[3]           1 site1           :  0.5526   0.0901     0.3768 -  0.7162
+
+============================================================
+
+
+ DERIVED parameter - Psi-conditional = [Pr(occ | detection history)]
+
+        Site                     psi-cond  Std.err     95% conf. interval
+psi-cond     1    site1        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     2    site2        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     3    site3        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond     4    site4        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     5    site5        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     6    site6        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     7    site7        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     8    site8        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond     9    site9        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    10   site10        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    11   site11        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    12   site12        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    13   site13        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    14   site14        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    15   site15        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    16   site16        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    17   site17        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    18   site18        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    19   site19        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    20   site20        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    21   site21        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    22   site22        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    23   site23        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    24   site24        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    25   site25        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    26   site26        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    27   site27        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    28   site28        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    29   site29        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    30   site30        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    31   site31        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    32   site32        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    33   site33        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    34   site34        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    35   site35        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    36   site36        :   0.3989  0.2370     0.0873 - 0.8215 
+psi-cond    37   site37        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    38   site38        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    39   site39        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    40   site40        :   1.0000  0.0000     1.0000 - 1.0000 
+psi-cond    41   site41        :   1.0000  0.0000     1.0000 - 1.0000 
+
+CPU time= 0 seconds (0.00 min)
+

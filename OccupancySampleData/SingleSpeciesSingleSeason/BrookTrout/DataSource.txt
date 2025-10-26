@@ -1,0 +1,13 @@
+ 
+Brook Trout
+   Single Season Single Species
+
+   This is from MARK demo files on occupancy.
+   Collected via electrofishing three 50 m sections of streams at 77 sites in the Upper   
+   Chattachochee River basin. 
+
+   77 streams 3 occasions, 4 covariates: 
+      elevation, cross   sectional area each occasion.
+
+   See http://people.oregonstate.edu/~peterjam/occupancy_workshop/hands_on.htmlfor further information
+ 

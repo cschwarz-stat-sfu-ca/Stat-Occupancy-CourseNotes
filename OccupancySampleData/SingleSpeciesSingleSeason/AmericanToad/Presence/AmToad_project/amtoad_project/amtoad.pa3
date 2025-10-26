@@ -1,0 +1,20 @@
+TITLE:American Toad
+DATAFILE:amtoad.pao
+SITECOVFILE:
+NSITES:29
+NSURVEYS:82
+NRVY/SEASON:82
+NSITECOV:1
+NSRVYCOV:1
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:100
+NMODELS:4
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(Habitat),p(Temp)	  183.16	     0.00	   0.3032	   1.0000	    4	  175.16	
+psi(*),p(Temp)	  183.58	     0.42	   0.2458	   0.8106	    3	  177.58	
+psi(Habitat),p(*)	  183.65	     0.49	   0.2373	   0.7827	    3	  177.65	
+1 group, Constant P	  183.86	     0.70	   0.2137	   0.7047	    2	  179.86	

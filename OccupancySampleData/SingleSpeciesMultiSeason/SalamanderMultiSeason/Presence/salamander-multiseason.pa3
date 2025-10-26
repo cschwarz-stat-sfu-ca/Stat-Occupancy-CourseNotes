@@ -1,0 +1,24 @@
+TITLE:Salamander Multi-Season
+DATAFILE:\\vboxsvr\cschwarz-desktop\occupancycourse\occupancysampledata\salamandermultiseason\salamander-multiseason.pao
+SITECOVFILE:
+NSITES:39
+NSURVEYS:10
+NRVY/SEASON:5,5
+NSITECOV:2
+NSRVYCOV:0
+CHAT:1.0
+ESS:0
+ADD1TONPAR:0
+CSUM:0
+NEIGHBORFILE:
+LASTMODEL:200
+NMODELS:8
+Model	AIC	deltaAIC	AIC wgt	Model Likelihood	no.Par.	-2*LogLike	
+psi(StreamProximity),gamma(),eps(),p()	  306.74	     0.00	   0.5181	   1.0000	    5	  296.74	
+psi(StreamProximity),gamma(),eps(StreamProximity),p()	  307.92	     1.18	   0.2872	   0.5543	    6	  295.92	
+psi(StreamProximity),gamma(StreamProximity),eps(),p()	  308.70	     1.96	   0.1945	   0.3753	    6	  296.70	
+psi,gamma(),eps(),p()	  324.77	    18.03	   0.0001	   0.0001	    4	  316.77	
+psi(Elevation),gamma(),eps(),p()	  325.68	    18.94	   0.0000	   0.0001	    5	  315.68	
+psi,gamma(Elevation),eps(),p()	  326.09	    19.35	   0.0000	   0.0001	    5	  316.09	
+psi,gamma(),eps(),p(season)	  326.19	    19.45	   0.0000	   0.0001	    5	  316.19	
+psi,gamma(),eps(Elevation),p()	  326.56	    19.82	   0.0000	   0.0000	    5	  316.56	
